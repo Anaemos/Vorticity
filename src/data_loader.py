@@ -1,60 +1,48 @@
-import os
+import os 
 import yfinance as yf
 import pandas as pd
 from datetime import datetime
 
-def download_index(
+def download_data(
     ticker: str,
     start_date: str,
     end_date: str,
     save_path: str,
 ):
-    """Download OHLCV data using yfinance and save to CSV.
-    Parameters:-
-    ticker : str
-        Yahoo Finance ticker (e.g. ^NSEI)
-    start_date : str
-        Start date (YYYY-MM-DD)
-    end_date : str
-        End date (YYYY-MM-DD)
-    save_path : str
-        Path to save CSV"""
-    print(f"[INFO] Downloading data for {ticker}")
-    print(f"[INFO] Period: {start_date} → {end_date}")
-
-    data = yf.download(
-        ticker,
-        start=start_date,
-        end=end_date,
-        progress=False
-    )
-
-    if data.empty:
-        raise ValueError("No data downloaded. Check ticker or dates.")
-
-    os.makedirs(os.path.dirname(save_path), exist_ok=True)
-
-    data.to_csv(save_path)
-
-    print(f"[SUCCESS] Saved to {save_path}")
-    print(f"[ROWS] {len(data)} records")
-
+    """Downloaded OHLCV data in tabular format"""
+    
+    
+    df = yf.download(ticker,start=start_date,end=end_date,auto_adjust=True,progress=False)
+    
+    if df.empty:
+        raise ValueError("No data was downloaded")
+    
+    #I needed to flatten multi index 
+    if isinstance(df.columns, pd.MultiIndex):
+        df.columns=df.columns.get_level_values(0)
+        
+    df=df.reset_index() #to get Date column
+    
+    cols=["Date","Open","High","Low","Close","Volume"]
+    df=df[cols]
+    
+    df=df.sort_values("Date")
+    df=df.dropna()
+    
+    os.makedirs(os.path.dirname(save_path),exist_ok=True)
+    df.to_csv(save_path,index=False)
+    
+    print("Saved")
 
 def main():
-
-    TICKER = "^NSEI"
-    START_DATE = "2005-01-01"
-    END_DATE = datetime.today().strftime("%Y-%m-%d")
-
-    SAVE_PATH = "data/raw/nifty50.csv"
-
-    download_index(
-        ticker=TICKER,
-        start_date=START_DATE,
-        end_date=END_DATE,
-        save_path=SAVE_PATH
+    START="2005-01-01"
+    END=datetime.today().strftime("%Y-%m-%d")
+    download_data(
+        ticker="^NSEI",
+        start_date=START,
+        end_date=END,
+        save_path="data/raw/nifty50.csv"
     )
-
-
-if __name__ == "__main__":
+    
+if __name__=="__main__":
     main()
