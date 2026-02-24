@@ -29,12 +29,16 @@ def add_moving_average_features(df:pd.DataFrame,windows=(5,10,20))->pd.DataFrame
     
     return df
 
-def add_volatility_features(df:pd.DataFrame,lags=(1,))->pd.DataFrame:
-    """Adds lagged volatility values"""
-    
-    df=df.copy()
-    
+def add_volatility_features(
+    df,
+    vol_col="volatility",
+    lags=(1,)
+    ):
+    """Add lagged volatility features from specified volatility column."""
+
+    df = df.copy()
+
     for lag in lags:
-        df[f"vol_lag_{lag}"]= df["volatility"].shift(lag)
-        
+        df[f"{vol_col}_lag_{lag}"] = df[vol_col].shift(lag)
+
     return df
