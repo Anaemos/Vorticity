@@ -5,3 +5,9 @@ data/raw/*
 data/processed/*
 .DS_Store
 **/lightning_logs/
+# Ignore all PyTorch model weights
+*.pt
+*.pth
+
+# If you want to ignore everything inside the models folder
+models/
