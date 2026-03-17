@@ -1,0 +1,157 @@
+[
+  {
+    "ticker": "NIFTYBEES.NS",
+    "name": "Nippon Nifty BeES",
+    "category": "ETF",
+    "sector": "Broad Market",
+    "type": "etf"
+  },
+  {
+    "ticker": "JUNIORBEES.NS",
+    "name": "Nippon Junior BeES",
+    "category": "ETF",
+    "sector": "Mid Cap",
+    "type": "etf"
+  },
+  {
+    "ticker": "BANKBEES.NS",
+    "name": "Nippon Bank BeES",
+    "category": "ETF",
+    "sector": "Banking",
+    "type": "etf"
+  },
+  {
+    "ticker": "PSUBNKBEES.NS",
+    "name": "Nippon PSU Bank BeES",
+    "category": "ETF",
+    "sector": "PSU Banking",
+    "type": "etf"
+  },
+  {
+    "ticker": "GOLDBEES.NS",
+    "name": "Nippon Gold BeES",
+    "category": "ETF",
+    "sector": "Gold",
+    "type": "etf"
+  },
+  {
+    "ticker": "CPSEETF.NS",
+    "name": "CPSE ETF",
+    "category": "ETF",
+    "sector": "PSU / Energy",
+    "type": "etf"
+  },
+  {
+    "ticker": "ITBEES.NS",
+    "name": "Nippon IT BeES",
+    "category": "ETF",
+    "sector": "IT",
+    "type": "etf",
+    "note": "limited_history"
+  },
+  {
+    "ticker": "RELIANCE.NS",
+    "name": "Reliance Industries",
+    "category": "Stock",
+    "sector": "Oil & Conglomerate",
+    "type": "stock"
+  },
+  {
+    "ticker": "TCS.NS",
+    "name": "Tata Consultancy Services",
+    "category": "Stock",
+    "sector": "IT",
+    "type": "stock"
+  },
+  {
+    "ticker": "HDFCBANK.NS",
+    "name": "HDFC Bank",
+    "category": "Stock",
+    "sector": "Private Banking",
+    "type": "stock"
+  },
+  {
+    "ticker": "ICICIBANK.NS",
+    "name": "ICICI Bank",
+    "category": "Stock",
+    "sector": "Private Banking",
+    "type": "stock"
+  },
+  {
+    "ticker": "KOTAKBANK.NS",
+    "name": "Kotak Mahindra Bank",
+    "category": "Stock",
+    "sector": "Private Banking",
+    "type": "stock"
+  },
+  {
+    "ticker": "SBIN.NS",
+    "name": "State Bank of India",
+    "category": "Stock",
+    "sector": "PSU Banking",
+    "type": "stock"
+  },
+  {
+    "ticker": "INFY.NS",
+    "name": "Infosys",
+    "category": "Stock",
+    "sector": "IT",
+    "type": "stock"
+  },
+  {
+    "ticker": "WIPRO.NS",
+    "name": "Wipro",
+    "category": "Stock",
+    "sector": "IT",
+    "type": "stock"
+  },
+  {
+    "ticker": "HCLTECH.NS",
+    "name": "HCL Technologies",
+    "category": "Stock",
+    "sector": "IT",
+    "type": "stock"
+  },
+  {
+    "ticker": "TATASTEEL.NS",
+    "name": "Tata Steel",
+    "category": "Stock",
+    "sector": "Steel",
+    "type": "stock"
+  },
+  {
+    "ticker": "HINDALCO.NS",
+    "name": "Hindalco Industries",
+    "category": "Stock",
+    "sector": "Aluminium",
+    "type": "stock"
+  },
+  {
+    "ticker": "COALINDIA.NS",
+    "name": "Coal India",
+    "category": "Stock",
+    "sector": "Coal / Energy",
+    "type": "stock"
+  },
+  {
+    "ticker": "ONGC.NS",
+    "name": "ONGC",
+    "category": "Stock",
+    "sector": "Oil & Gas",
+    "type": "stock"
+  },
+  {
+    "ticker": "BPCL.NS",
+    "name": "BPCL",
+    "category": "Stock",
+    "sector": "Oil Refining",
+    "type": "stock"
+  },
+  {
+    "ticker": "BHARTIARTL.NS",
+    "name": "Bharti Airtel",
+    "category": "Stock",
+    "sector": "Telecom",
+    "type": "stock"
+  }
+]
