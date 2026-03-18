@@ -7,61 +7,11 @@
     "type": "etf"
   },
   {
-    "ticker": "JUNIORBEES.NS",
-    "name": "Nippon Junior BeES",
-    "category": "ETF",
-    "sector": "Mid Cap",
-    "type": "etf"
-  },
-  {
-    "ticker": "BANKBEES.NS",
-    "name": "Nippon Bank BeES",
-    "category": "ETF",
-    "sector": "Banking",
-    "type": "etf"
-  },
-  {
-    "ticker": "PSUBNKBEES.NS",
-    "name": "Nippon PSU Bank BeES",
-    "category": "ETF",
-    "sector": "PSU Banking",
-    "type": "etf"
-  },
-  {
     "ticker": "GOLDBEES.NS",
     "name": "Nippon Gold BeES",
     "category": "ETF",
     "sector": "Gold",
     "type": "etf"
-  },
-  {
-    "ticker": "CPSEETF.NS",
-    "name": "CPSE ETF",
-    "category": "ETF",
-    "sector": "PSU / Energy",
-    "type": "etf"
-  },
-  {
-    "ticker": "ITBEES.NS",
-    "name": "Nippon IT BeES",
-    "category": "ETF",
-    "sector": "IT",
-    "type": "etf",
-    "note": "limited_history"
-  },
-  {
-    "ticker": "RELIANCE.NS",
-    "name": "Reliance Industries",
-    "category": "Stock",
-    "sector": "Oil & Conglomerate",
-    "type": "stock"
-  },
-  {
-    "ticker": "TCS.NS",
-    "name": "Tata Consultancy Services",
-    "category": "Stock",
-    "sector": "IT",
-    "type": "stock"
   },
   {
     "ticker": "HDFCBANK.NS",
@@ -78,13 +28,6 @@
     "type": "stock"
   },
   {
-    "ticker": "KOTAKBANK.NS",
-    "name": "Kotak Mahindra Bank",
-    "category": "Stock",
-    "sector": "Private Banking",
-    "type": "stock"
-  },
-  {
     "ticker": "SBIN.NS",
     "name": "State Bank of India",
     "category": "Stock",
@@ -92,45 +35,10 @@
     "type": "stock"
   },
   {
-    "ticker": "INFY.NS",
-    "name": "Infosys",
+    "ticker": "RELIANCE.NS",
+    "name": "Reliance Industries",
     "category": "Stock",
-    "sector": "IT",
-    "type": "stock"
-  },
-  {
-    "ticker": "WIPRO.NS",
-    "name": "Wipro",
-    "category": "Stock",
-    "sector": "IT",
-    "type": "stock"
-  },
-  {
-    "ticker": "HCLTECH.NS",
-    "name": "HCL Technologies",
-    "category": "Stock",
-    "sector": "IT",
-    "type": "stock"
-  },
-  {
-    "ticker": "TATASTEEL.NS",
-    "name": "Tata Steel",
-    "category": "Stock",
-    "sector": "Steel",
-    "type": "stock"
-  },
-  {
-    "ticker": "HINDALCO.NS",
-    "name": "Hindalco Industries",
-    "category": "Stock",
-    "sector": "Aluminium",
-    "type": "stock"
-  },
-  {
-    "ticker": "COALINDIA.NS",
-    "name": "Coal India",
-    "category": "Stock",
-    "sector": "Coal / Energy",
+    "sector": "Oil & Conglomerate",
     "type": "stock"
   },
   {
@@ -141,10 +49,52 @@
     "type": "stock"
   },
   {
-    "ticker": "BPCL.NS",
-    "name": "BPCL",
+    "ticker": "TCS.NS",
+    "name": "Tata Consultancy Services",
     "category": "Stock",
-    "sector": "Oil Refining",
+    "sector": "IT",
+    "type": "stock"
+  },
+  {
+    "ticker": "INFY.NS",
+    "name": "Infosys",
+    "category": "Stock",
+    "sector": "IT",
+    "type": "stock"
+  },
+  {
+    "ticker": "HINDUNILVR.NS",
+    "name": "Hindustan Unilever",
+    "category": "Stock",
+    "sector": "FMCG",
+    "type": "stock"
+  },
+  {
+    "ticker": "ITC.NS",
+    "name": "ITC",
+    "category": "Stock",
+    "sector": "FMCG",
+    "type": "stock"
+  },
+  {
+    "ticker": "SUNPHARMA.NS",
+    "name": "Sun Pharma",
+    "category": "Stock",
+    "sector": "Pharma",
+    "type": "stock"
+  },
+  {
+    "ticker": "TATAMOTORS.NS",
+    "name": "Tata Motors",
+    "category": "Stock",
+    "sector": "Auto",
+    "type": "stock"
+  },
+  {
+    "ticker": "TATASTEEL.NS",
+    "name": "Tata Steel",
+    "category": "Stock",
+    "sector": "Metals",
     "type": "stock"
   },
   {
