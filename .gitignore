@@ -11,3 +11,5 @@ data/processed/*
 
 # If you want to ignore everything inside the models folder
 models/
+
+logs/
