@@ -35,13 +35,6 @@
     "type": "stock"
   },
   {
-    "ticker": "RELIANCE.NS",
-    "name": "Reliance Industries",
-    "category": "Stock",
-    "sector": "Oil & Conglomerate",
-    "type": "stock"
-  },
-  {
     "ticker": "ONGC.NS",
     "name": "ONGC",
     "category": "Stock",
@@ -49,15 +42,15 @@
     "type": "stock"
   },
   {
-    "ticker": "TCS.NS",
-    "name": "Tata Consultancy Services",
+    "ticker": "INFY.NS",
+    "name": "Infosys",
     "category": "Stock",
     "sector": "IT",
     "type": "stock"
   },
   {
-    "ticker": "INFY.NS",
-    "name": "Infosys",
+    "ticker": "HCLTECH.NS",
+    "name": "HCL Technologies",
     "category": "Stock",
     "sector": "IT",
     "type": "stock"
