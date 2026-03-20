@@ -1,0 +1,79 @@
+{
+  "ticker": "ONGC.NS",
+  "name": "ONGC",
+  "category": "Stock",
+  "sector": "Oil & Gas",
+  "updated_at": "2026-03-21T01:21:09.084373+05:30",
+  "data_through": "2026-03-20",
+  "regime": "Low",
+  "entropy": 0.0965,
+  "stability": "Unstable",
+  "transition_risk": {
+    "1d": 0.0044,
+    "3d": 0.0105,
+    "5d": 0.0194
+  },
+  "empirical_high_prob": 0.0015,
+  "var_1pct": -0.030491,
+  "var_5pct": -0.020868,
+  "return_range": {
+    "q10": -0.016466,
+    "q50": 0.0,
+    "q90": 0.01637
+  },
+  "regime_stats": {
+    "Low": {
+      "mean": 0.000189,
+      "std": 0.013043,
+      "skew": 0.0942,
+      "kurt": 0.4004,
+      "var_1pct": -0.030491,
+      "var_5pct": -0.020868,
+      "q10": -0.016466,
+      "q50": 0.0,
+      "q90": 0.01637,
+      "count": 2004
+    },
+    "Medium": {
+      "mean": 0.000523,
+      "std": 0.019037,
+      "skew": 0.1587,
+      "kurt": 0.4034,
+      "var_1pct": -0.043111,
+      "var_5pct": -0.029818,
+      "q10": -0.02282,
+      "q50": 0.000342,
+      "q90": 0.025383,
+      "count": 2055
+    },
+    "High": {
+      "mean": 0.001623,
+      "std": 0.037965,
+      "skew": 1.1901,
+      "kurt": 33.6059,
+      "var_1pct": -0.096277,
+      "var_5pct": -0.048993,
+      "q10": -0.036711,
+      "q50": 0.001739,
+      "q90": 0.038782,
+      "count": 1159
+    }
+  },
+  "transition_matrix": {
+    "Low": {
+      "Low": 0.976,
+      "Medium": 0.0225,
+      "High": 0.0015
+    },
+    "Medium": {
+      "Low": 0.0229,
+      "Medium": 0.9645,
+      "High": 0.0127
+    },
+    "High": {
+      "Low": 0.0009,
+      "Medium": 0.0242,
+      "High": 0.975
+    }
+  }
+}

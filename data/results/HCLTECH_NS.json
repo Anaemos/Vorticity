@@ -1,0 +1,79 @@
+{
+  "ticker": "HCLTECH.NS",
+  "name": "HCL Technologies",
+  "category": "Stock",
+  "sector": "IT",
+  "updated_at": "2026-03-21T01:21:10.208146+05:30",
+  "data_through": "2026-03-20",
+  "regime": "Medium",
+  "entropy": 0.0164,
+  "stability": "Stable",
+  "transition_risk": {
+    "1d": 0.0014,
+    "3d": 0.0099,
+    "5d": 0.1251
+  },
+  "empirical_high_prob": 0.0131,
+  "var_1pct": -0.044996,
+  "var_5pct": -0.02893,
+  "return_range": {
+    "q10": -0.021639,
+    "q50": 0.000888,
+    "q90": 0.023969
+  },
+  "regime_stats": {
+    "Low": {
+      "mean": 0.000956,
+      "std": 0.012664,
+      "skew": 0.1358,
+      "kurt": 0.5017,
+      "var_1pct": -0.028592,
+      "var_5pct": -0.019556,
+      "q10": -0.014837,
+      "q50": 0.00069,
+      "q90": 0.016569,
+      "count": 2048
+    },
+    "Medium": {
+      "mean": 0.000909,
+      "std": 0.018259,
+      "skew": -0.017,
+      "kurt": 0.7256,
+      "var_1pct": -0.044996,
+      "var_5pct": -0.02893,
+      "q10": -0.021639,
+      "q50": 0.000888,
+      "q90": 0.023969,
+      "count": 1911
+    },
+    "High": {
+      "mean": 0.001214,
+      "std": 0.034265,
+      "skew": 0.3384,
+      "kurt": 2.5792,
+      "var_1pct": -0.085378,
+      "var_5pct": -0.053149,
+      "q10": -0.038395,
+      "q50": 0.000123,
+      "q90": 0.040837,
+      "count": 1260
+    }
+  },
+  "transition_matrix": {
+    "Low": {
+      "Low": 0.9731,
+      "Medium": 0.0254,
+      "High": 0.0015
+    },
+    "Medium": {
+      "Low": 0.0277,
+      "Medium": 0.9592,
+      "High": 0.0131
+    },
+    "High": {
+      "Low": 0.0016,
+      "Medium": 0.0206,
+      "High": 0.9778
+    }
+  }
+}

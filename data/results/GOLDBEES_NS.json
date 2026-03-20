@@ -1,0 +1,79 @@
+{
+  "ticker": "GOLDBEES.NS",
+  "name": "Nippon Gold BeES",
+  "category": "ETF",
+  "sector": "Gold",
+  "updated_at": "2026-03-21T01:21:06.635203+05:30",
+  "data_through": "2026-03-20",
+  "regime": "High",
+  "entropy": 0.0,
+  "stability": "Stable",
+  "transition_risk": {
+    "1d": 0.9956,
+    "3d": 0.9941,
+    "5d": 0.9964
+  },
+  "empirical_high_prob": 0.9722,
+  "var_1pct": -0.059376,
+  "var_5pct": -0.029109,
+  "return_range": {
+    "q10": -0.018303,
+    "q50": 0.001033,
+    "q90": 0.023134
+  },
+  "regime_stats": {
+    "Low": {
+      "mean": 0.000202,
+      "std": 0.007512,
+      "skew": 0.0133,
+      "kurt": 2.1257,
+      "var_1pct": -0.018743,
+      "var_5pct": -0.011591,
+      "q10": -0.00827,
+      "q50": 0.000124,
+      "q90": 0.009045,
+      "count": 1838
+    },
+    "Medium": {
+      "mean": 0.000773,
+      "std": 0.007535,
+      "skew": 0.2551,
+      "kurt": 1.8595,
+      "var_1pct": -0.016917,
+      "var_5pct": -0.010848,
+      "q10": -0.008112,
+      "q50": 0.000479,
+      "q90": 0.010064,
+      "count": 1845
+    },
+    "High": {
+      "mean": 0.182533,
+      "std": 4.26057,
+      "skew": 23.2337,
+      "kurt": 539.8706,
+      "var_1pct": -0.059376,
+      "var_5pct": -0.029109,
+      "q10": -0.018303,
+      "q50": 0.001033,
+      "q90": 0.023134,
+      "count": 540
+    }
+  },
+  "transition_matrix": {
+    "Low": {
+      "Low": 0.0,
+      "Medium": 0.9978,
+      "High": 0.0022
+    },
+    "Medium": {
+      "Low": 0.994,
+      "Medium": 0.0,
+      "High": 0.006
+    },
+    "High": {
+      "Low": 0.0074,
+      "Medium": 0.0204,
+      "High": 0.9722
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "ticker": "SBIN.NS",
+  "name": "State Bank of India",
+  "category": "Stock",
+  "sector": "PSU Banking",
+  "updated_at": "2026-03-21T01:21:08.444619+05:30",
+  "data_through": "2026-03-20",
+  "regime": "Low",
+  "entropy": 0.101,
+  "stability": "Unstable",
+  "transition_risk": {
+    "1d": 0.9881,
+    "3d": 0.9744,
+    "5d": 0.995
+  },
+  "empirical_high_prob": 0.0016,
+  "var_1pct": -0.031387,
+  "var_5pct": -0.02136,
+  "return_range": {
+    "q10": -0.017011,
+    "q50": 0.000819,
+    "q90": 0.016987
+  },
+  "regime_stats": {
+    "Low": {
+      "mean": 0.000561,
+      "std": 0.013324,
+      "skew": 0.002,
+      "kurt": 0.281,
+      "var_1pct": -0.031387,
+      "var_5pct": -0.02136,
+      "q10": -0.017011,
+      "q50": 0.000819,
+      "q90": 0.016987,
+      "count": 1935
+    },
+    "Medium": {
+      "mean": 0.000747,
+      "std": 0.020211,
+      "skew": 0.033,
+      "kurt": 0.6254,
+      "var_1pct": -0.048058,
+      "var_5pct": -0.033496,
+      "q10": -0.02392,
+      "q50": 0.000331,
+      "q90": 0.026247,
+      "count": 2111
+    },
+    "High": {
+      "mean": 0.001499,
+      "std": 0.034036,
+      "skew": 0.6437,
+      "kurt": 5.5473,
+      "var_1pct": -0.080422,
+      "var_5pct": -0.049542,
+      "q10": -0.036696,
+      "q50": 0.000878,
+      "q90": 0.039887,
+      "count": 1172
+    }
+  },
+  "transition_matrix": {
+    "Low": {
+      "Low": 0.9762,
+      "Medium": 0.0222,
+      "High": 0.0016
+    },
+    "Medium": {
+      "Low": 0.0218,
+      "Medium": 0.9645,
+      "High": 0.0137
+    },
+    "High": {
+      "Low": 0.0009,
+      "Medium": 0.0273,
+      "High": 0.9718
+    }
+  }
+}

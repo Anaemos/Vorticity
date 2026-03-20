@@ -1,0 +1,79 @@
+{
+  "ticker": "BHARTIARTL.NS",
+  "name": "Bharti Airtel",
+  "category": "Stock",
+  "sector": "Telecom",
+  "updated_at": "2026-03-21T01:21:13.547961+05:30",
+  "data_through": "2026-03-20",
+  "regime": "Low",
+  "entropy": 0.0356,
+  "stability": "Stable",
+  "transition_risk": {
+    "1d": 0.9918,
+    "3d": 0.9905,
+    "5d": 0.9886
+  },
+  "empirical_high_prob": 0.0023,
+  "var_1pct": -0.029731,
+  "var_5pct": -0.020391,
+  "return_range": {
+    "q10": -0.014805,
+    "q50": 0.00031,
+    "q90": 0.017264
+  },
+  "regime_stats": {
+    "Low": {
+      "mean": 0.000848,
+      "std": 0.013056,
+      "skew": 0.2659,
+      "kurt": 0.8367,
+      "var_1pct": -0.029731,
+      "var_5pct": -0.020391,
+      "q10": -0.014805,
+      "q50": 0.00031,
+      "q90": 0.017264,
+      "count": 1745
+    },
+    "Medium": {
+      "mean": 0.000286,
+      "std": 0.019149,
+      "skew": 0.2249,
+      "kurt": 0.6731,
+      "var_1pct": -0.043735,
+      "var_5pct": -0.029414,
+      "q10": -0.022633,
+      "q50": -0.000665,
+      "q90": 0.023947,
+      "count": 2159
+    },
+    "High": {
+      "mean": 0.001563,
+      "std": 0.030625,
+      "skew": 0.4834,
+      "kurt": 4.3373,
+      "var_1pct": -0.073334,
+      "var_5pct": -0.046643,
+      "q10": -0.033353,
+      "q50": 0.000262,
+      "q90": 0.03888,
+      "count": 1314
+    }
+  },
+  "transition_matrix": {
+    "Low": {
+      "Low": 0.9719,
+      "Medium": 0.0258,
+      "High": 0.0023
+    },
+    "Medium": {
+      "Low": 0.0232,
+      "Medium": 0.9625,
+      "High": 0.0144
+    },
+    "High": {
+      "Low": 0.0,
+      "Medium": 0.0274,
+      "High": 0.9726
+    }
+  }
+}

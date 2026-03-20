@@ -1,0 +1,79 @@
+{
+  "ticker": "MARUTI.NS",
+  "name": "Maruti Suzuki",
+  "category": "Stock",
+  "sector": "Auto",
+  "updated_at": "2026-03-21T01:21:12.433200+05:30",
+  "data_through": "2026-03-20",
+  "regime": "Medium",
+  "entropy": 0.0341,
+  "stability": "Stable",
+  "transition_risk": {
+    "1d": 0.0018,
+    "3d": 0.0099,
+    "5d": 0.0076
+  },
+  "empirical_high_prob": 0.0117,
+  "var_1pct": -0.044736,
+  "var_5pct": -0.030242,
+  "return_range": {
+    "q10": -0.022562,
+    "q50": 7.3e-05,
+    "q90": 0.024534
+  },
+  "regime_stats": {
+    "Low": {
+      "mean": 0.000765,
+      "std": 0.012268,
+      "skew": 0.346,
+      "kurt": 0.8568,
+      "var_1pct": -0.026281,
+      "var_5pct": -0.018386,
+      "q10": -0.013899,
+      "q50": -4.7e-05,
+      "q90": 0.016371,
+      "count": 2377
+    },
+    "Medium": {
+      "mean": 0.000672,
+      "std": 0.019367,
+      "skew": 0.3005,
+      "kurt": 1.0194,
+      "var_1pct": -0.044736,
+      "var_5pct": -0.030242,
+      "q10": -0.022562,
+      "q50": 7.3e-05,
+      "q90": 0.024534,
+      "count": 1962
+    },
+    "High": {
+      "mean": 0.00153,
+      "std": 0.032093,
+      "skew": -0.0635,
+      "kurt": 2.3882,
+      "var_1pct": -0.086625,
+      "var_5pct": -0.052432,
+      "q10": -0.035049,
+      "q50": 0.000836,
+      "q90": 0.037564,
+      "count": 879
+    }
+  },
+  "transition_matrix": {
+    "Low": {
+      "Low": 0.9798,
+      "Medium": 0.0194,
+      "High": 0.0008
+    },
+    "Medium": {
+      "Low": 0.024,
+      "Medium": 0.9643,
+      "High": 0.0117
+    },
+    "High": {
+      "Low": 0.0011,
+      "Medium": 0.0284,
+      "High": 0.9704
+    }
+  }
+}

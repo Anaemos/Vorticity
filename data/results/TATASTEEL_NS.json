@@ -1,0 +1,79 @@
+{
+  "ticker": "TATASTEEL.NS",
+  "name": "Tata Steel",
+  "category": "Stock",
+  "sector": "Metals",
+  "updated_at": "2026-03-21T01:21:13.012559+05:30",
+  "data_through": "2026-03-20",
+  "regime": "High",
+  "entropy": 0.0653,
+  "stability": "Stable",
+  "transition_risk": {
+    "1d": 0.999,
+    "3d": 0.997,
+    "5d": 0.9931
+  },
+  "empirical_high_prob": 0.9797,
+  "var_1pct": -0.103143,
+  "var_5pct": -0.057589,
+  "return_range": {
+    "q10": -0.041927,
+    "q50": 0.001516,
+    "q90": 0.047207
+  },
+  "regime_stats": {
+    "Low": {
+      "mean": 0.002228,
+      "std": 0.017996,
+      "skew": 0.2262,
+      "kurt": 0.6303,
+      "var_1pct": -0.041019,
+      "var_5pct": -0.025698,
+      "q10": -0.01973,
+      "q50": 0.001564,
+      "q90": 0.02514,
+      "count": 1792
+    },
+    "Medium": {
+      "mean": -0.000994,
+      "std": 0.019553,
+      "skew": -0.0471,
+      "kurt": 1.0813,
+      "var_1pct": -0.054724,
+      "var_5pct": -0.033176,
+      "q10": -0.024854,
+      "q50": -0.001092,
+      "q90": 0.022561,
+      "count": 1797
+    },
+    "High": {
+      "mean": 0.001203,
+      "std": 0.037682,
+      "skew": 0.0095,
+      "kurt": 1.7154,
+      "var_1pct": -0.103143,
+      "var_5pct": -0.057589,
+      "q10": -0.041927,
+      "q50": 0.001516,
+      "q90": 0.047207,
+      "count": 1629
+    }
+  },
+  "transition_matrix": {
+    "Low": {
+      "Low": 0.0,
+      "Medium": 1.0,
+      "High": 0.0
+    },
+    "Medium": {
+      "Low": 0.9794,
+      "Medium": 0.0017,
+      "High": 0.0189
+    },
+    "High": {
+      "Low": 0.019,
+      "Medium": 0.0012,
+      "High": 0.9797
+    }
+  }
+}

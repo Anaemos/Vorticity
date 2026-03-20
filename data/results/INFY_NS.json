@@ -1,0 +1,79 @@
+{
+  "ticker": "INFY.NS",
+  "name": "Infosys",
+  "category": "Stock",
+  "sector": "IT",
+  "updated_at": "2026-03-21T01:21:09.646156+05:30",
+  "data_through": "2026-03-20",
+  "regime": "Medium",
+  "entropy": 0.0232,
+  "stability": "Stable",
+  "transition_risk": {
+    "1d": 0.0064,
+    "3d": 0.0215,
+    "5d": 0.1061
+  },
+  "empirical_high_prob": 0.0122,
+  "var_1pct": -0.042142,
+  "var_5pct": -0.026251,
+  "return_range": {
+    "q10": -0.019133,
+    "q50": 0.000846,
+    "q90": 0.021785
+  },
+  "regime_stats": {
+    "Low": {
+      "mean": 0.000727,
+      "std": 0.012026,
+      "skew": 0.1611,
+      "kurt": 0.4061,
+      "var_1pct": -0.027685,
+      "var_5pct": -0.018735,
+      "q10": -0.01385,
+      "q50": 0.00035,
+      "q90": 0.015524,
+      "count": 2275
+    },
+    "Medium": {
+      "mean": 0.00103,
+      "std": 0.016693,
+      "skew": 0.0494,
+      "kurt": 0.7957,
+      "var_1pct": -0.042142,
+      "var_5pct": -0.026251,
+      "q10": -0.019133,
+      "q50": 0.000846,
+      "q90": 0.021785,
+      "count": 1726
+    },
+    "High": {
+      "mean": 0.000159,
+      "std": 0.028389,
+      "skew": -0.2905,
+      "kurt": 6.4699,
+      "var_1pct": -0.083247,
+      "var_5pct": -0.042869,
+      "q10": -0.02911,
+      "q50": 0.0,
+      "q90": 0.029848,
+      "count": 1217
+    }
+  },
+  "transition_matrix": {
+    "Low": {
+      "Low": 0.9736,
+      "Medium": 0.022,
+      "High": 0.0044
+    },
+    "Medium": {
+      "Low": 0.0261,
+      "Medium": 0.9617,
+      "High": 0.0122
+    },
+    "High": {
+      "Low": 0.0123,
+      "Medium": 0.014,
+      "High": 0.9737
+    }
+  }
+}

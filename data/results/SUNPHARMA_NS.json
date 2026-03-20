@@ -1,0 +1,79 @@
+{
+  "ticker": "SUNPHARMA.NS",
+  "name": "Sun Pharma",
+  "category": "Stock",
+  "sector": "Pharma",
+  "updated_at": "2026-03-21T01:21:11.867879+05:30",
+  "data_through": "2026-03-20",
+  "regime": "Low",
+  "entropy": 0.0111,
+  "stability": "Stable",
+  "transition_risk": {
+    "1d": 0.9932,
+    "3d": 0.994,
+    "5d": 0.9941
+  },
+  "empirical_high_prob": 0.0042,
+  "var_1pct": -0.02801,
+  "var_5pct": -0.017805,
+  "return_range": {
+    "q10": -0.013254,
+    "q50": 0.00071,
+    "q90": 0.015908
+  },
+  "regime_stats": {
+    "Low": {
+      "mean": 0.001006,
+      "std": 0.01194,
+      "skew": 0.1434,
+      "kurt": 0.8439,
+      "var_1pct": -0.02801,
+      "var_5pct": -0.017805,
+      "q10": -0.013254,
+      "q50": 0.00071,
+      "q90": 0.015908,
+      "count": 2148
+    },
+    "Medium": {
+      "mean": 0.000953,
+      "std": 0.018016,
+      "skew": 0.1914,
+      "kurt": 0.6771,
+      "var_1pct": -0.042415,
+      "var_5pct": -0.026814,
+      "q10": -0.020907,
+      "q50": 0.000399,
+      "q90": 0.023883,
+      "count": 2125
+    },
+    "High": {
+      "mean": 0.000566,
+      "std": 0.02978,
+      "skew": 0.1608,
+      "kurt": 5.2471,
+      "var_1pct": -0.084837,
+      "var_5pct": -0.043964,
+      "q10": -0.030017,
+      "q50": -0.000322,
+      "q90": 0.033976,
+      "count": 945
+    }
+  },
+  "transition_matrix": {
+    "Low": {
+      "Low": 0.9781,
+      "Medium": 0.0177,
+      "High": 0.0042
+    },
+    "Medium": {
+      "Low": 0.0212,
+      "Medium": 0.9694,
+      "High": 0.0094
+    },
+    "High": {
+      "Low": 0.0032,
+      "Medium": 0.0286,
+      "High": 0.9683
+    }
+  }
+}
