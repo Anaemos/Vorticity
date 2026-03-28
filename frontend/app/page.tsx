@@ -1,65 +1,168 @@
-import Image from "next/image";
+'use client'
+import { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
 
-export default function Home() {
+export default function SplashPage() {
+  const router = useRouter()
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    // fade in after mount
+    const t = setTimeout(() => setVisible(true), 80)
+    return () => clearTimeout(t)
+  }, [])
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div style={{
+      minHeight: '100vh',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: '40px 24px',
+      opacity: visible ? 1 : 0,
+      transition: 'opacity 0.6s ease',
+    }}>
+
+      {/* logo mark */}
+      <div style={{
+        width: '52px',
+        height: '52px',
+        border: '1.5px solid var(--accent)',
+        borderRadius: '8px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontSize: '20px',
+        fontWeight: 600,
+        color: 'var(--accent)',
+        letterSpacing: '-0.04em',
+        boxShadow: '0 0 24px rgba(0,229,255,0.12)',
+        marginBottom: '32px',
+      }}>
+        VX
+      </div>
+
+      {/* name */}
+      <div style={{
+        fontSize: '28px',
+        fontWeight: 600,
+        color: 'var(--base)',
+        letterSpacing: '0.18em',
+        textTransform: 'uppercase',
+        marginBottom: '12px',
+      }}>
+        Vorticity
+      </div>
+
+      {/* tagline */}
+      <div style={{
+        fontSize: '12px',
+        color: 'var(--muted)',
+        letterSpacing: '0.08em',
+        marginBottom: '8px',
+        textAlign: 'center',
+      }}>
+        Daily volatility regime intelligence for Indian equities and ETFs.
+      </div>
+
+      <div style={{
+        fontSize: '10px',
+        color: 'var(--dim)',
+        letterSpacing: '0.06em',
+        marginBottom: '56px',
+        textAlign: 'center',
+      }}>
+        NSE - 14 instruments - HMM regime detection - TFT risk forecasting
+      </div>
+
+      {/* CTA */}
+      <button
+        onClick={() => router.push('/dashboard')}
+        style={{
+          padding: '10px 32px',
+          border: '1px solid var(--accent)',
+          background: 'rgba(0,229,255,0.06)',
+          color: 'var(--accent)',
+          fontFamily: "'IBM Plex Mono', monospace",
+          fontSize: '11px',
+          fontWeight: 500,
+          letterSpacing: '0.12em',
+          textTransform: 'uppercase',
+          borderRadius: '3px',
+          cursor: 'pointer',
+          transition: 'background 0.15s, box-shadow 0.15s',
+          marginBottom: '48px',
+        }}
+        onMouseEnter={e => {
+          e.currentTarget.style.background = 'rgba(0,229,255,0.12)'
+          e.currentTarget.style.boxShadow  = '0 0 16px rgba(0,229,255,0.15)'
+        }}
+        onMouseLeave={e => {
+          e.currentTarget.style.background = 'rgba(0,229,255,0.06)'
+          e.currentTarget.style.boxShadow  = 'none'
+        }}
+      >
+        Enter Dashboard
+      </button>
+
+      {/* what is this */}
+      <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: '6px',
+      }}>
+        <div style={{ fontSize: '9px', color: 'var(--dim)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+          What is this?
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div style={{
+          maxWidth: '420px',
+          textAlign: 'center',
+          fontSize: '11px',
+          color: 'var(--dim)',
+          lineHeight: 1.7,
+          fontFamily: "'IBM Plex Sans', sans-serif",
+        }}>
+          Vorticity runs nightly after market close. It detects the current volatility
+          regime of each instrument using a Hidden Markov Model, then forecasts the
+          probability of entering a high-volatility period using a Temporal Fusion
+          Transformer.
         </div>
-      </main>
+        <button
+          onClick={() => router.push('/help')}
+          style={{
+            marginTop: '12px',
+            background: 'none',
+            border: 'none',
+            color: 'var(--muted)',
+            fontFamily: "'IBM Plex Mono', monospace",
+            fontSize: '10px',
+            letterSpacing: '0.08em',
+            cursor: 'pointer',
+            textDecoration: 'underline',
+            textUnderlineOffset: '3px',
+            textDecorationColor: 'var(--border2)',
+          }}
+        >
+          Read the glossary
+        </button>
+      </div>
+
+      {/* bottom corner - data note */}
+      <div style={{
+        position: 'fixed',
+        bottom: '20px',
+        right: '24px',
+        fontSize: '9px',
+        color: 'var(--dim)',
+        letterSpacing: '0.06em',
+        textAlign: 'right',
+        lineHeight: 1.6,
+      }}>
+        Data sourced from Yahoo Finance via yfinance.<br />
+        Not financial advice.
+      </div>
     </div>
-  );
+  )
 }
