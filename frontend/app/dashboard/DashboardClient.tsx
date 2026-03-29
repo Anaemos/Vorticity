@@ -47,7 +47,7 @@ export default function DashboardClient({ data }: Props) {
         onSort={setSort}
       />
 
-      <div style={{ padding: '20px 24px' }}>
+      <div style={{ padding: '24px 28px' }}>
         {/* count */}
         <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px', marginBottom: '14px' }}>
           <span className="label">Instruments</span>
@@ -68,8 +68,9 @@ export default function DashboardClient({ data }: Props) {
         ) : (
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
-            gap: '10px',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))',
+            gap: '14px',
+            maxWidth: '1400px',
           }}>
             {filtered.map((d, i) => (
               <TickerCard key={d.ticker} data={d} index={i} />
