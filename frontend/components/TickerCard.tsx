@@ -33,15 +33,15 @@ export default function TickerCard({ data, index }: Props) {
         display: 'flex',
         alignItems: 'flex-start',
         justifyContent: 'space-between',
-        padding: '12px 14px 8px 16px',
+        padding: '16px 16px 12px 18px',
         borderBottom: '1px solid var(--border)',
       }}>
         <div>
-          <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--base)', letterSpacing: '0.02em' }}>
+          <div style={{ fontSize: '15px', fontWeight: 600, color: 'var(--base)', letterSpacing: '0.02em' }}>
             {slug}
-            <span style={{ color: 'var(--dim)', fontSize: '9px', fontWeight: 400 }}>.NS</span>
+            <span style={{ color: 'var(--dim)', fontSize: '10px', fontWeight: 400 }}>.NS</span>
           </div>
-          <div style={{ fontSize: '10px', color: 'var(--muted)', fontFamily: "'IBM Plex Sans', sans-serif", marginTop: '2px' }}>
+          <div style={{ fontSize: '12px', color: 'var(--muted)', fontFamily: "'IBM Plex Sans', sans-serif", marginTop: '4px' }}>
             {data.name}
           </div>
         </div>
@@ -52,11 +52,11 @@ export default function TickerCard({ data, index }: Props) {
       </div>
 
       {/* data rows */}
-      <div style={{ padding: '10px 14px 10px 16px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+      <div style={{ padding: '14px 16px 12px 18px', display: 'flex', flexDirection: 'column', gap: '11px' }}>
 
         {/* transition risk */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <span className="label" style={{ width: '76px', flexShrink: 0 }}>Trans. risk</span>
+          <span className="label" style={{ width: '88px', flexShrink: 0 }}>Trans. risk</span>
           <div style={{ display: 'flex', gap: '6px', flex: 1 }}>
             {HORIZONS.map(h => {
               const v = data.transition_risk[h]
@@ -78,7 +78,7 @@ export default function TickerCard({ data, index }: Props) {
 
         {/* VaR */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <span className="label" style={{ width: '76px', flexShrink: 0 }}>VaR</span>
+          <span className="label" style={{ width: '88px', flexShrink: 0 }}>VaR</span>
           <div style={{ display: 'flex', gap: '12px' }}>
             <span>
               <span className="label" style={{ fontSize: '8px', marginRight: '4px' }}>1%</span>
@@ -93,7 +93,7 @@ export default function TickerCard({ data, index }: Props) {
 
         {/* return range */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <span className="label" style={{ width: '76px', flexShrink: 0 }}>Q10/50/90</span>
+          <span className="label" style={{ width: '88px', flexShrink: 0 }}>Q10/50/90</span>
           <div style={{ display: 'flex', alignItems: 'center', gap: '4px', fontSize: '10px' }}>
             <span style={{ color: 'var(--high)' }}>{fmtReturn(data.return_range.q10)}</span>
             <span style={{ color: 'var(--dim)' }}>/</span>
@@ -105,7 +105,7 @@ export default function TickerCard({ data, index }: Props) {
 
         {/* entropy */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <span className="label" style={{ width: '76px', flexShrink: 0 }}>Entropy</span>
+          <span className="label" style={{ width: '88px', flexShrink: 0 }}>Entropy</span>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <div className="entropy-track">
               <div className="entropy-fill" style={{ width: entropyBarWidth(data.entropy) }} />
@@ -117,7 +117,7 @@ export default function TickerCard({ data, index }: Props) {
         {/* regime mean/std */}
         {stats && (
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <span className="label" style={{ width: '76px', flexShrink: 0 }}>Regime u/s</span>
+            <span className="label" style={{ width: '88px', flexShrink: 0 }}>Regime u/s</span>
             <div style={{ fontSize: '10px', color: 'var(--muted)' }}>
               {fmtReturn(stats.mean)}
               <span style={{ color: 'var(--dim)', margin: '0 4px' }}>/</span>
@@ -128,7 +128,7 @@ export default function TickerCard({ data, index }: Props) {
 
         {/* empirical high prob */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <span className="label" style={{ width: '76px', flexShrink: 0 }}> High P</span>
+          <span className="label" style={{ width: '88px', flexShrink: 0 }}>High P</span>
           <span style={{ fontSize: '10px', color: empiricalHighColor(data.empirical_high_prob) }}>
             {fmtPct(data.empirical_high_prob, 2)}
           </span>
@@ -140,7 +140,7 @@ export default function TickerCard({ data, index }: Props) {
       <div style={{
         display: 'flex',
         justifyContent: 'space-between',
-        padding: '6px 14px 6px 16px',
+        padding: '8px 16px 8px 18px',
         borderTop: '1px solid var(--border)',
       }}>
         <span className="label">{data.category} - {data.sector}</span>
