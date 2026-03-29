@@ -1,26 +1,176 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg:      #0d1117;
+  --bg2:     #111827;
+  --bg3:     #161f2e;
+  --bg4:     #1c2638;
+  --border:  #1e2d45;
+  --border2: #2a3d5c;
+  --dim:     #4a5a72;
+  --muted:   #7a8fa8;
+  --base:    #c8d6e8;
+  --accent:  #00e5ff;
+  --low:     #00c47a;
+  --med:     #f5a623;
+  --high:    #e84040;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--base);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* subtle CRT scanlines */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.05) 2px,
+    rgba(0, 0, 0, 0.05) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+
+/* color utilities */
+.text-accent  { color: var(--accent); }
+.text-low     { color: var(--low); }
+.text-med     { color: var(--med); }
+.text-high    { color: var(--high); }
+.text-base    { color: var(--base); }
+.text-muted   { color: var(--muted); }
+.text-dim     { color: var(--dim); }
+
+/* regime + stability badges */
+.badge {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 2px;
+  border: 1px solid;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+
+.badge-low       { color: var(--low);  background: rgba(0,196,122,0.10);  border-color: rgba(0,196,122,0.30); }
+.badge-medium    { color: var(--med);  background: rgba(245,166,35,0.10);  border-color: rgba(245,166,35,0.30); }
+.badge-high      { color: var(--high); background: rgba(232,64,64,0.10);   border-color: rgba(232,64,64,0.30); }
+.badge-stable    { color: var(--low);  background: rgba(0,196,122,0.07);   border-color: rgba(0,196,122,0.20); }
+.badge-uncertain { color: var(--med);  background: rgba(245,166,35,0.07);  border-color: rgba(245,166,35,0.20); }
+.badge-unstable  { color: var(--high); background: rgba(232,64,64,0.07);   border-color: rgba(232,64,64,0.20); }
+
+/* card base */
+.card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.card:hover {
+  border-color: var(--border2);
+  background: var(--bg3);
+}
+
+/* section label - the small uppercase labels */
+.label {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+/* filter button */
+.filter-btn {
+  padding: 4px 11px;
+  border: 1px solid var(--border2);
+  background: transparent;
+  color: var(--muted);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: border-color 0.12s, color 0.12s, background 0.12s;
+  text-transform: uppercase;
+}
+
+.filter-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.filter-btn.active-all      { background: rgba(0,229,255,0.08);  border-color: var(--accent); color: var(--accent); }
+.filter-btn.active-low      { background: rgba(0,196,122,0.10);  border-color: var(--low);    color: var(--low); }
+.filter-btn.active-medium   { background: rgba(245,166,35,0.10); border-color: var(--med);    color: var(--med); }
+.filter-btn.active-high     { background: rgba(232,64,64,0.10);  border-color: var(--high);   color: var(--high); }
+.filter-btn.active-stable   { background: rgba(0,196,122,0.08);  border-color: var(--low);    color: var(--low); }
+.filter-btn.active-uncertain{ background: rgba(245,166,35,0.08); border-color: var(--med);    color: var(--med); }
+.filter-btn.active-unstable { background: rgba(232,64,64,0.08);  border-color: var(--high);   color: var(--high); }
+
+/* risk bar */
+.risk-bar-track {
+  height: 3px;
+  background: var(--bg4);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.risk-bar-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* entropy bar */
+.entropy-track {
+  width: 56px;
+  height: 3px;
+  background: var(--bg4);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.entropy-fill {
+  height: 100%;
+  border-radius: 2px;
+  background: linear-gradient(to right, var(--low), var(--med), var(--high));
+}
+
+/* card enter animation */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  animation: fadeUp 0.22s ease both;
 }
