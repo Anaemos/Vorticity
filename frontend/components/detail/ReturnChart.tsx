@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
+import type { UTCTimestamp } from 'lightweight-charts'
 import type { TickerResult, Regime } from '@/lib/types'
 
 interface Props {
@@ -89,9 +90,8 @@ export default function ReturnChart({ data }: Props) {
           crosshairMarkerVisible: false,
         })
 
-        // lightweight-charts needs time series data - we use index as fake time
         series.setData(
-          points.map((p, i) => ({ time: i + 1, value: p.y }))
+          points.map((p, i) => ({ time: (i + 1) as UTCTimestamp, value: p.y }))
         )
       })
 
