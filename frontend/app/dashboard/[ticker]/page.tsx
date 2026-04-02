@@ -12,14 +12,13 @@ interface Props {
   params: Promise<{ ticker: string }>
 }
 
-// tell Next.js which slugs exist at build time
 export function generateStaticParams() {
   return TICKERS.map(t => ({ ticker: t.slug }))
 }
 
 export default async function TickerDetailPage({ params }: Props) {
-  const { ticker }  = await params
-  const fullTicker  = slugToTicker(ticker)
+  const { ticker } = await params
+  const fullTicker = slugToTicker(ticker)
   const data       = await fetchTickerResult(fullTicker)
 
   if (!data) notFound()
@@ -40,7 +39,6 @@ export default async function TickerDetailPage({ params }: Props) {
         borderBottom: '1px solid var(--border)',
         background: 'var(--bg2)',
       }}>
-        {/* back link */}
         <Link href="/dashboard" style={{
           fontSize: '10px',
           color: 'var(--dim)',
@@ -55,15 +53,14 @@ export default async function TickerDetailPage({ params }: Props) {
         </Link>
 
         <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px' }}>
-          {/* name block */}
           <div>
             <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px', marginBottom: '4px' }}>
-              <h1 style={{ fontSize: '24px', fontWeight: 600, color: 'var(--base)', letterSpacing: '0.02em', margin: 0 }}>
+              <h1 style={{ fontSize: '26px', fontWeight: 600, color: 'var(--base)', letterSpacing: '0.02em', margin: 0 }}>
                 {ticker}
               </h1>
-              <span style={{ fontSize: '12px', color: 'var(--dim)' }}>.NS</span>
+              <span style={{ fontSize: '13px', color: 'var(--dim)' }}>.NS</span>
             </div>
-            <div style={{ fontSize: '14px', color: 'var(--muted)', fontFamily: "'IBM Plex Sans', sans-serif", marginBottom: '8px' }}>
+            <div style={{ fontSize: '14px', color: 'var(--muted)', fontFamily: "'IBM Plex Sans', sans-serif", marginBottom: '6px' }}>
               {data.name}
             </div>
             <div style={{ fontSize: '10px', color: 'var(--dim)', letterSpacing: '0.06em' }}>
@@ -71,13 +68,11 @@ export default async function TickerDetailPage({ params }: Props) {
             </div>
           </div>
 
-          {/* regime + stability block */}
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '8px' }}>
             <div style={{ display: 'flex', gap: '8px' }}>
               <span className={`badge badge-${regimeKey}`}>{data.regime}</span>
               <span className={`badge badge-${stabKey}`}>{data.stability}</span>
             </div>
-            {/* regime pill with context */}
             <div style={{
               padding: '6px 14px',
               borderRadius: '3px',
@@ -90,25 +85,22 @@ export default async function TickerDetailPage({ params }: Props) {
               Currently in <strong>{data.regime}</strong> volatility regime
             </div>
             <div style={{ fontSize: '10px', color: 'var(--dim)', textAlign: 'right' }}>
-              Updated {fmtUpdatedAt(data.updated_at)} &nbsp;·&nbsp; Data through {fmtDate(data.data_through)}
+              Updated {fmtUpdatedAt(data.updated_at)} &nbsp;&middot;&nbsp; Data through {fmtDate(data.data_through)}
             </div>
           </div>
         </div>
       </div>
 
-      {/* panels */}
-      <div style={{ padding: '24px 28px', display: 'flex', flexDirection: 'column', gap: '16px', maxWidth: '1100px' }}>
-        {/* top row - risk + matrix */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
-          <RiskPanel data={data} />
-          <TransitionMatrix data={data} />
+      {/* panels - centered with max width */}
+      <div style={{ padding: '28px', display: 'flex', justifyContent: 'center' }}>
+        <div style={{ width: '100%', maxWidth: '1100px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+            <RiskPanel data={data} />
+            <TransitionMatrix data={data} />
+          </div>
+          <ReturnChart data={data} />
+          <RegimeStatsTable data={data} />
         </div>
-
-        {/* return distribution chart - full width */}
-        <ReturnChart data={data} />
-
-        {/* regime stats table - full width */}
-        <RegimeStatsTable data={data} />
       </div>
     </>
   )
