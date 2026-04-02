@@ -25,7 +25,7 @@ function GroupSection({ group, terms }: { group: HelpTerm['group']; terms: HelpT
             style={{
               display: 'block',
               textDecoration: 'none',
-              padding: '14px 18px',
+              padding: '16px 20px',
               background: 'var(--bg2)',
               border: '1px solid var(--border)',
               borderRadius: '4px',
@@ -33,18 +33,11 @@ function GroupSection({ group, terms }: { group: HelpTerm['group']; terms: HelpT
             }}
             className="help-card"
           >
-            <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: '16px' }}>
-              <div>
-                <div style={{ fontSize: '13px', fontWeight: 500, color: 'var(--base)', marginBottom: '4px' }}>
-                  {term.title}
-                </div>
-                <div style={{ fontSize: '11px', color: 'var(--muted)', fontFamily: "'IBM Plex Sans', sans-serif", lineHeight: 1.5 }}>
-                  {term.summary}
-                </div>
-              </div>
-              <div style={{ fontSize: '10px', color: 'var(--dim)', flexShrink: 0 }}>
-                /help/{term.slug} &rarr;
-              </div>
+            <div style={{ fontSize: '13px', fontWeight: 500, color: 'var(--base)', marginBottom: '5px' }}>
+              {term.title}
+            </div>
+            <div style={{ fontSize: '12px', color: 'var(--muted)', fontFamily: "'IBM Plex Sans', sans-serif", lineHeight: 1.6 }}>
+              {term.summary}
             </div>
           </Link>
         ))}
@@ -60,40 +53,41 @@ export default function HelpIndexPage() {
     <>
       <Header />
 
-      <div style={{ padding: '32px 28px', maxWidth: '860px' }}>
-        {/* page header */}
-        <div style={{ marginBottom: '36px' }}>
-          <Link href="/dashboard" style={{
-            fontSize: '10px',
-            color: 'var(--dim)',
-            textDecoration: 'none',
-            letterSpacing: '0.08em',
-            display: 'inline-block',
-            marginBottom: '20px',
-          }}>
-            &larr; Dashboard
-          </Link>
-          <h1 style={{ fontSize: '22px', fontWeight: 600, color: 'var(--base)', marginBottom: '8px', margin: '0 0 8px' }}>
-            Glossary
-          </h1>
-          <p style={{
-            fontSize: '12px',
-            color: 'var(--muted)',
-            fontFamily: "'IBM Plex Sans', sans-serif",
-            lineHeight: 1.7,
-            margin: 0,
-            maxWidth: '560px',
-          }}>
-            Every term shown on the dashboard explained in plain language.
-            Click any term for the full explanation with examples.
-          </p>
-        </div>
+      <div style={{ padding: '40px 0', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <div style={{ width: '100%', maxWidth: '720px', padding: '0 28px' }}>
 
-        {/* grouped terms */}
-        {groups.map(group => {
-          const terms = HELP_CONTENT.filter(t => t.group === group)
-          return <GroupSection key={group} group={group} terms={terms} />
-        })}
+          {/* page header */}
+          <div style={{ marginBottom: '40px', textAlign: 'center' }}>
+            <Link href="/dashboard" style={{
+              fontSize: '10px',
+              color: 'var(--dim)',
+              textDecoration: 'none',
+              letterSpacing: '0.08em',
+              display: 'inline-block',
+              marginBottom: '20px',
+            }}>
+              &larr; Dashboard
+            </Link>
+            <h1 style={{ fontSize: '24px', fontWeight: 600, color: 'var(--base)', margin: '0 0 10px' }}>
+              Glossary
+            </h1>
+            <p style={{
+              fontSize: '13px',
+              color: 'var(--muted)',
+              fontFamily: "'IBM Plex Sans', sans-serif",
+              lineHeight: 1.7,
+              margin: 0,
+            }}>
+              Every term shown on the dashboard, explained in plain language.
+              Click any term for the full explanation with examples.
+            </p>
+          </div>
+
+          {groups.map(group => {
+            const terms = HELP_CONTENT.filter(t => t.group === group)
+            return <GroupSection key={group} group={group} terms={terms} />
+          })}
+        </div>
       </div>
 
       <style>{`
