@@ -18,21 +18,18 @@ export default function DashboardClient({ data }: Props) {
 
   const filtered = useMemo(() => {
     let out = [...data]
-
     if (regime !== 'all')    out = out.filter(d => d.regime === regime)
     if (stability !== 'all') out = out.filter(d => d.stability === stability)
-
     out.sort((a, b) => {
       switch (sort) {
         case 'ticker':  return a.ticker.localeCompare(b.ticker)
         case 'regime':  return REGIME_ORDER[a.regime] - REGIME_ORDER[b.regime]
         case 'risk5d':  return b.transition_risk['5d'] - a.transition_risk['5d']
         case 'entropy': return b.entropy - a.entropy
-        case 'var':     return a.var_1pct - b.var_1pct // most negative first
+        case 'var':     return a.var_1pct - b.var_1pct
         default:        return 0
       }
     })
-
     return out
   }, [data, regime, stability, sort])
 
@@ -48,29 +45,20 @@ export default function DashboardClient({ data }: Props) {
       />
 
       <div style={{ padding: '24px 28px' }}>
-        {/* count */}
-        <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px', marginBottom: '14px' }}>
+        <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px', marginBottom: '16px' }}>
           <span className="label">Instruments</span>
           <span style={{ fontSize: '9px', color: 'var(--accent)' }}>{filtered.length} showing</span>
         </div>
 
-        {/* grid */}
         {filtered.length === 0 ? (
-          <div style={{
-            textAlign: 'center',
-            padding: '60px',
-            color: 'var(--dim)',
-            fontSize: '11px',
-            letterSpacing: '0.1em',
-          }}>
+          <div style={{ textAlign: 'center', padding: '60px', color: 'var(--dim)', fontSize: '11px', letterSpacing: '0.1em' }}>
             No tickers match current filters.
           </div>
         ) : (
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))',
-            gap: '14px',
-            maxWidth: '1400px',
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            gap: '16px',
           }}>
             {filtered.map((d, i) => (
               <TickerCard key={d.ticker} data={d} index={i} />
