@@ -8,14 +8,18 @@ interface Props {
   index: number
 }
 
-const HORIZONS = ['1d', '3d', '5d'] as const
+const HORIZONS: { key: '1d' | '3d' | '5d'; label: string }[] = [
+  { key: '1d', label: '1 day' },
+  { key: '3d', label: '3 days' },
+  { key: '5d', label: '5 days' },
+]
 
 export default function TickerCard({ data, index }: Props) {
-  const slug       = tickerToSlug(data.ticker)
-  const regimeKey  = data.regime.toLowerCase()
-  const stabKey    = data.stability.toLowerCase()
-  const stats      = data.regime_stats[data.regime]
-  const leftColor  = REGIME_COLOR[data.regime]
+  const slug      = tickerToSlug(data.ticker)
+  const regimeKey = data.regime.toLowerCase()
+  const stabKey   = data.stability.toLowerCase()
+  const stats     = data.regime_stats[data.regime]
+  const leftColor = REGIME_COLOR[data.regime]
 
   return (
     <Link
@@ -33,7 +37,7 @@ export default function TickerCard({ data, index }: Props) {
         display: 'flex',
         alignItems: 'flex-start',
         justifyContent: 'space-between',
-        padding: '16px 16px 12px 18px',
+        padding: '16px 18px 12px 18px',
         borderBottom: '1px solid var(--border)',
       }}>
         <div>
@@ -51,88 +55,84 @@ export default function TickerCard({ data, index }: Props) {
         </div>
       </div>
 
-      {/* data rows */}
-      <div style={{ padding: '14px 16px 12px 18px', display: 'flex', flexDirection: 'column', gap: '11px' }}>
+      {/* metrics */}
+      <div style={{ padding: '16px 18px 14px 18px', display: 'flex', flexDirection: 'column', gap: '14px' }}>
 
         {/* transition risk */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <span className="label" style={{ width: '88px', flexShrink: 0 }}>Trans. risk</span>
-          <div style={{ display: 'flex', gap: '6px', flex: 1 }}>
-            {HORIZONS.map(h => {
-              const v = data.transition_risk[h]
+        <div>
+          <div className="label" style={{ marginBottom: '10px' }}>Transition risk</div>
+          <div style={{ display: 'flex', gap: '12px' }}>
+            {HORIZONS.map(({ key, label }) => {
+              const v = data.transition_risk[key]
               const c = riskColor(v)
               return (
-                <div key={h} style={{ flex: 1 }}>
-                  <div className="label" style={{ fontSize: '8px', textAlign: 'center', marginBottom: '3px' }}>{h}</div>
-                  <div className="risk-bar-track">
+                <div key={key} style={{ flex: 1 }}>
+                  <div className="label" style={{ fontSize: '9px', marginBottom: '5px' }}>{label}</div>
+                  <div className="risk-bar-track" style={{ height: '4px' }}>
                     <div className="risk-bar-fill" style={{ width: riskBarWidth(v), background: c }} />
                   </div>
-                  <div style={{ fontSize: '9px', color: c, textAlign: 'center', marginTop: '2px' }}>
+                  <div style={{ fontSize: '12px', fontWeight: 500, color: c, marginTop: '4px' }}>
                     {fmtPct(v)}
                   </div>
                 </div>
               )
             })}
+
           </div>
         </div>
 
-        {/* VaR */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <span className="label" style={{ width: '88px', flexShrink: 0 }}>VaR</span>
-          <div style={{ display: 'flex', gap: '12px' }}>
-            <span>
-              <span className="label" style={{ fontSize: '8px', marginRight: '4px' }}>1%</span>
-              <span style={{ fontSize: '11px', color: 'var(--high)' }}>{fmtReturn(data.var_1pct)}</span>
-            </span>
-            <span>
-              <span className="label" style={{ fontSize: '8px', marginRight: '4px' }}>5%</span>
-              <span style={{ fontSize: '11px', color: 'var(--high)' }}>{fmtReturn(data.var_5pct)}</span>
-            </span>
-          </div>
-        </div>
+        <div style={{ borderTop: '1px solid var(--border)' }} />
 
-        {/* return range */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <span className="label" style={{ width: '88px', flexShrink: 0 }}>Q10/50/90</span>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '4px', fontSize: '10px' }}>
-            <span style={{ color: 'var(--high)' }}>{fmtReturn(data.return_range.q10)}</span>
-            <span style={{ color: 'var(--dim)' }}>/</span>
-            <span style={{ color: 'var(--muted)' }}>{fmtReturn(data.return_range.q50)}</span>
-            <span style={{ color: 'var(--dim)' }}>/</span>
-            <span style={{ color: 'var(--low)' }}>{fmtReturn(data.return_range.q90)}</span>
-          </div>
-        </div>
-
-        {/* entropy */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <span className="label" style={{ width: '88px', flexShrink: 0 }}>Entropy</span>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <div className="entropy-track">
-              <div className="entropy-fill" style={{ width: entropyBarWidth(data.entropy) }} />
-            </div>
-            <span style={{ fontSize: '10px', color: 'var(--muted)' }}>{fmtEntropy(data.entropy)}</span>
-          </div>
-        </div>
-
-        {/* regime mean/std */}
-        {stats && (
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <span className="label" style={{ width: '88px', flexShrink: 0 }}>Regime u/s</span>
-            <div style={{ fontSize: '10px', color: 'var(--muted)' }}>
-              {fmtReturn(stats.mean)}
-              <span style={{ color: 'var(--dim)', margin: '0 4px' }}>/</span>
-              {fmtReturn(stats.std)}
+        {/* VaR | empirical high probability */}
+        <div style={{ display: 'flex', gap: '0' }}>
+          {/* VaR — left */}
+          <div style={{ flex: 1, paddingRight: '14px', borderRight: '1px solid var(--border)' }}>
+            <div className="label" style={{ marginBottom: '8px' }}>Value at Risk</div>
+            <div style={{ display: 'flex', gap: '20px' }}>
+              <div>
+                <div className="label" style={{ fontSize: '8px', marginBottom: '3px' }}>1%</div>
+                <div style={{ fontSize: '13px', fontWeight: 500, color: 'var(--high)' }}>{fmtReturn(data.var_1pct)}</div>
+              </div>
+              <div>
+                <div className="label" style={{ fontSize: '8px', marginBottom: '3px' }}>5%</div>
+                <div style={{ fontSize: '13px', fontWeight: 500, color: 'var(--high)' }}>{fmtReturn(data.var_5pct)}</div>
+              </div>
             </div>
           </div>
-        )}
 
-        {/* empirical high prob */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <span className="label" style={{ width: '88px', flexShrink: 0 }}>High P</span>
-          <span style={{ fontSize: '10px', color: empiricalHighColor(data.empirical_high_prob) }}>
-            {fmtPct(data.empirical_high_prob, 2)}
-          </span>
-          <span className="label" style={{ fontSize: '8px' }}>empirical</span>
+          {/* empirical high probability — right */}
+          <div style={{ flex: 1, paddingLeft: '14px' }}>
+            <div className="label" style={{ marginBottom: '8px' }}>Empirical high probability</div>
+            <div style={{ fontSize: '20px', fontWeight: 600, color: empiricalHighColor(data.empirical_high_prob) }}>
+              {fmtPct(data.empirical_high_prob, 2)}
+            </div>
+          </div>
+        </div>
+
+        <div style={{ borderTop: '1px solid var(--border)' }} />
+
+        {/* entropy | mean and std */}
+        <div style={{ display: 'flex', gap: '0' }}>
+          {/* entropy */}
+          <div style={{ flex: 1, paddingRight: '14px', borderRight: stats ? '1px solid var(--border)' : 'none' }}>
+            <div className="label" style={{ marginBottom: '6px' }}>Entropy</div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '7px' }}>
+              <div className="entropy-track" style={{ width: '44px' }}>
+                <div className="entropy-fill" style={{ width: entropyBarWidth(data.entropy) }} />
+              </div>
+              <span style={{ fontSize: '12px', color: 'var(--muted)' }}>{fmtEntropy(data.entropy)}</span>
+            </div>
+          </div>
+
+          {/* mean / std — right */}
+          {stats && (
+            <div style={{ flex: 1, paddingLeft: '14px' }}>
+              <div className="label" style={{ marginBottom: '6px' }}>Mean and standard deviation</div>
+              <div style={{ fontSize: '11px', color: 'var(--muted)' }}>
+                {fmtReturn(stats.mean)} / {fmtReturn(stats.std)}
+              </div>
+            </div>
+          )}
         </div>
       </div>
 
@@ -140,7 +140,7 @@ export default function TickerCard({ data, index }: Props) {
       <div style={{
         display: 'flex',
         justifyContent: 'space-between',
-        padding: '8px 16px 8px 18px',
+        padding: '8px 18px',
         borderTop: '1px solid var(--border)',
       }}>
         <span className="label">{data.category} - {data.sector}</span>
