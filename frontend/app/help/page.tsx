@@ -54,7 +54,7 @@ export default function HelpIndexPage() {
       <Header />
 
       <div style={{ padding: '40px 0', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <div style={{ width: '100%', maxWidth: '720px', padding: '0 28px' }}>
+        <div style={{ width: '100%', maxWidth: '830px', padding: '0 36px' }}>
 
           {/* page header */}
           <div style={{ marginBottom: '40px', textAlign: 'center' }}>
