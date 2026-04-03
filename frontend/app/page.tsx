@@ -25,23 +25,16 @@ export default function SplashPage() {
     }}>
 
       {/* logo mark */}
-      <div style={{
-        width: '52px',
-        height: '52px',
-        border: '1.5px solid var(--accent)',
-        borderRadius: '8px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        fontSize: '20px',
-        fontWeight: 600,
-        color: 'var(--accent)',
-        letterSpacing: '-0.04em',
-        boxShadow: '0 0 24px rgba(0,229,255,0.12)',
-        marginBottom: '32px',
-      }}>
-        VX
-      </div>
+      <img
+        src="/mini.svg"
+        alt="Vorticity Logo"
+        style={{
+          width: '300px',
+          height: '300px',
+          marginBottom: '32px',
+          filter: 'drop-shadow(0 0 12px rgba(0,229,255,0.25))',
+        }}
+      />
 
       {/* name */}
       <div style={{
