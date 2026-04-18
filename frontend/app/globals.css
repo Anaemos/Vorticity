@@ -92,7 +92,7 @@ body::before {
   background: var(--bg2);
   border: 1px solid var(--border);
   border-radius: 4px;
-  transition: border-color 0.15s, background 0.15s;
+  transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
 }
 
 .card:hover {
@@ -100,7 +100,17 @@ body::before {
   background: var(--bg3);
 }
 
-/* section label - the small uppercase labels */
+/* high regime cards get a subtle persistent red glow */
+.card-high-regime {
+  animation: highPulse 3s ease-in-out infinite;
+}
+
+@keyframes highPulse {
+  0%, 100% { box-shadow: 0 0 0px rgba(232,64,64,0); }
+  50%       { box-shadow: 0 0 12px rgba(232,64,64,0.18); }
+}
+
+/* section label */
 .label {
   font-size: 9px;
   letter-spacing: 0.12em;
@@ -173,4 +183,14 @@ body::before {
 
 .fade-up {
   animation: fadeUp 0.22s ease both;
+}
+
+/* page-level fade in - applied to main content wrappers */
+@keyframes pageFade {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.page-enter {
+  animation: pageFade 0.30s ease both;
 }

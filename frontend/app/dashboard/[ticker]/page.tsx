@@ -92,7 +92,7 @@ export default async function TickerDetailPage({ params }: Props) {
       </div>
 
       {/* panels - centered with max width */}
-      <div style={{ padding: '28px', display: 'flex', justifyContent: 'center' }}>
+      <div className="page-enter" style={{ padding: '28px', display: 'flex', justifyContent: 'center' }}>
         <div style={{ width: '100%', maxWidth: '1100px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
             <RiskPanel data={data} />

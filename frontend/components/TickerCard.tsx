@@ -24,7 +24,7 @@ export default function TickerCard({ data, index }: Props) {
   return (
     <Link
       href={`/dashboard/${slug}`}
-      className="card fade-up"
+      className={`card fade-up${data.regime === 'High' ? ' card-high-regime' : ''}`}
       style={{
         display: 'block',
         textDecoration: 'none',

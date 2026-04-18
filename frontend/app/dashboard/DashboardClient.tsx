@@ -44,7 +44,7 @@ export default function DashboardClient({ data }: Props) {
         onSort={setSort}
       />
 
-      <div style={{ padding: '24px 28px' }}>
+      <div className="page-enter" style={{ padding: '24px 28px' }}>
         <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px', marginBottom: '16px' }}>
           <span className="label">Instruments</span>
           <span style={{ fontSize: '9px', color: 'var(--accent)' }}>{filtered.length} showing</span>
