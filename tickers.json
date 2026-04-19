@@ -28,6 +28,20 @@
     "type": "stock"
   },
   {
+    "ticker": "AXISBANK.NS",
+    "name": "Axis Bank",
+    "category": "Stock",
+    "sector": "Private Banking",
+    "type": "stock"
+  },
+  {
+    "ticker": "ULTRACEMCO.NS",
+    "name": "UltraTech Cement",
+    "category": "Stock",
+    "sector": "Cement & Infrastructure",
+    "type": "stock"
+  },
+  {
     "ticker": "SBIN.NS",
     "name": "State Bank of India",
     "category": "Stock",
@@ -56,6 +70,13 @@
     "type": "stock"
   },
   {
+    "ticker": "WIPRO.NS",
+    "name": "Wipro",
+    "category": "Stock",
+    "sector": "IT",
+    "type": "stock"
+  },
+  {
     "ticker": "HINDUNILVR.NS",
     "name": "Hindustan Unilever",
     "category": "Stock",
@@ -67,6 +88,13 @@
     "name": "ITC",
     "category": "Stock",
     "sector": "FMCG",
+    "type": "stock"
+  },
+  {
+    "ticker": "ASIANPAINT.NS",
+    "name": "Asian Paints",
+    "category": "Stock",
+    "sector": "Consumer Discretionary",
     "type": "stock"
   },
   {
@@ -88,6 +116,20 @@
     "name": "Tata Steel",
     "category": "Stock",
     "sector": "Metals",
+    "type": "stock"
+  },
+  {
+    "ticker": "ADANIENT.NS",
+    "name": "Adani Enterprises",
+    "category": "Stock",
+    "sector": "Conglomerate",
+    "type": "stock"
+  },
+  {
+    "ticker": "NTPC.NS",
+    "name": "NTPC",
+    "category": "Stock",
+    "sector": "Power & Utilities",
     "type": "stock"
   },
   {
