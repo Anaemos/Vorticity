@@ -13,3 +13,6 @@ data/processed/*
 models/
 
 logs/
+
+#To ignore bat file I made to automate data updating
+*.bat
