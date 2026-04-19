@@ -1,0 +1,79 @@
+{
+  "ticker": "AXISBANK.NS",
+  "name": "Axis Bank",
+  "category": "Stock",
+  "sector": "Private Banking",
+  "updated_at": "2026-04-19T20:10:51.106470+05:30",
+  "data_through": "2026-04-17",
+  "regime": "High",
+  "entropy": 0.6076,
+  "stability": "Unstable",
+  "transition_risk": {
+    "1d": 0.9949,
+    "3d": 0.9971,
+    "5d": 0.9956
+  },
+  "empirical_high_prob": 0.982,
+  "var_1pct": -0.086466,
+  "var_5pct": -0.055127,
+  "return_range": {
+    "q10": -0.042425,
+    "q50": 0.000197,
+    "q90": 0.04694
+  },
+  "regime_stats": {
+    "Low": {
+      "mean": 0.000636,
+      "std": 0.013325,
+      "skew": 0.1234,
+      "kurt": 0.7505,
+      "var_1pct": -0.030188,
+      "var_5pct": -0.02068,
+      "q10": -0.015288,
+      "q50": 0.000263,
+      "q90": 0.017375,
+      "count": 1906
+    },
+    "Medium": {
+      "mean": 0.001072,
+      "std": 0.020595,
+      "skew": 0.1819,
+      "kurt": 0.7338,
+      "var_1pct": -0.046213,
+      "var_5pct": -0.031458,
+      "q10": -0.024109,
+      "q50": 0.000166,
+      "q90": 0.027148,
+      "count": 1937
+    },
+    "High": {
+      "mean": 0.001388,
+      "std": 0.037686,
+      "skew": 0.0387,
+      "kurt": 3.8493,
+      "var_1pct": -0.086466,
+      "var_5pct": -0.055127,
+      "q10": -0.042425,
+      "q50": 0.000197,
+      "q90": 0.04694,
+      "count": 1391
+    }
+  },
+  "transition_matrix": {
+    "Low": {
+      "Low": 0.9764,
+      "Medium": 0.0226,
+      "High": 0.001
+    },
+    "Medium": {
+      "Low": 0.0232,
+      "Medium": 0.9649,
+      "High": 0.0119
+    },
+    "High": {
+      "Low": 0.0,
+      "Medium": 0.018,
+      "High": 0.982
+    }
+  }
+}

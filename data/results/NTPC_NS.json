@@ -1,0 +1,79 @@
+{
+  "ticker": "NTPC.NS",
+  "name": "NTPC",
+  "category": "Stock",
+  "sector": "Power & Utilities",
+  "updated_at": "2026-04-19T20:11:10.153193+05:30",
+  "data_through": "2026-04-17",
+  "regime": "Low",
+  "entropy": 0.0078,
+  "stability": "Stable",
+  "transition_risk": {
+    "1d": 0.9961,
+    "3d": 0.9936,
+    "5d": 0.9904
+  },
+  "empirical_high_prob": 0.0008,
+  "var_1pct": -0.029047,
+  "var_5pct": -0.019536,
+  "return_range": {
+    "q10": -0.015101,
+    "q50": 0.0,
+    "q90": 0.01582
+  },
+  "regime_stats": {
+    "Low": {
+      "mean": 0.000112,
+      "std": 0.012318,
+      "skew": 0.1448,
+      "kurt": 0.5464,
+      "var_1pct": -0.029047,
+      "var_5pct": -0.019536,
+      "q10": -0.015101,
+      "q50": 0.0,
+      "q90": 0.01582,
+      "count": 2634
+    },
+    "Medium": {
+      "mean": 0.001253,
+      "std": 0.0184,
+      "skew": 0.1962,
+      "kurt": 0.6495,
+      "var_1pct": -0.04147,
+      "var_5pct": -0.027764,
+      "q10": -0.021188,
+      "q50": 0.000219,
+      "q90": 0.024821,
+      "count": 1887
+    },
+    "High": {
+      "mean": 0.000757,
+      "std": 0.031659,
+      "skew": -0.1673,
+      "kurt": 2.3045,
+      "var_1pct": -0.084069,
+      "var_5pct": -0.050611,
+      "q10": -0.036864,
+      "q50": 0.000832,
+      "q90": 0.037722,
+      "count": 713
+    }
+  },
+  "transition_matrix": {
+    "Low": {
+      "Low": 0.978,
+      "Medium": 0.0213,
+      "High": 0.0008
+    },
+    "Medium": {
+      "Low": 0.0297,
+      "Medium": 0.9613,
+      "High": 0.009
+    },
+    "High": {
+      "Low": 0.0042,
+      "Medium": 0.0238,
+      "High": 0.9719
+    }
+  }
+}

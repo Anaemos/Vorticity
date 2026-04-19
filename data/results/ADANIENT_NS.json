@@ -1,0 +1,79 @@
+{
+  "ticker": "ADANIENT.NS",
+  "name": "Adani Enterprises",
+  "category": "Stock",
+  "sector": "Conglomerate",
+  "updated_at": "2026-04-19T20:11:09.225258+05:30",
+  "data_through": "2026-04-17",
+  "regime": "Medium",
+  "entropy": 0.0094,
+  "stability": "Stable",
+  "transition_risk": {
+    "1d": 0.0156,
+    "3d": 0.0523,
+    "5d": 0.0956
+  },
+  "empirical_high_prob": 0.0141,
+  "var_1pct": -0.069344,
+  "var_5pct": -0.043839,
+  "return_range": {
+    "q10": -0.032975,
+    "q50": 0.000631,
+    "q90": 0.037767
+  },
+  "regime_stats": {
+    "Low": {
+      "mean": 0.00136,
+      "std": 0.018337,
+      "skew": 0.2502,
+      "kurt": 1.259,
+      "var_1pct": -0.042094,
+      "var_5pct": -0.027958,
+      "q10": -0.020368,
+      "q50": 0.000411,
+      "q90": 0.023189,
+      "count": 2019
+    },
+    "Medium": {
+      "mean": 0.001533,
+      "std": 0.028908,
+      "skew": 0.2032,
+      "kurt": 1.0553,
+      "var_1pct": -0.069344,
+      "var_5pct": -0.043839,
+      "q10": -0.032975,
+      "q50": 0.000631,
+      "q90": 0.037767,
+      "count": 2192
+    },
+    "High": {
+      "mean": 0.00324,
+      "std": 0.061999,
+      "skew": 1.8258,
+      "kurt": 37.8521,
+      "var_1pct": -0.164882,
+      "var_5pct": -0.071488,
+      "q10": -0.049889,
+      "q50": 0.00063,
+      "q90": 0.059356,
+      "count": 1023
+    }
+  },
+  "transition_matrix": {
+    "Low": {
+      "Low": 0.9718,
+      "Medium": 0.0223,
+      "High": 0.0059
+    },
+    "Medium": {
+      "Low": 0.0233,
+      "Medium": 0.9626,
+      "High": 0.0141
+    },
+    "High": {
+      "Low": 0.0049,
+      "Medium": 0.0371,
+      "High": 0.958
+    }
+  }
+}

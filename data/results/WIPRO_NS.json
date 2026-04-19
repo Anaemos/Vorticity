@@ -1,0 +1,79 @@
+{
+  "ticker": "WIPRO.NS",
+  "name": "Wipro",
+  "category": "Stock",
+  "sector": "IT",
+  "updated_at": "2026-04-19T20:10:59.154584+05:30",
+  "data_through": "2026-04-17",
+  "regime": "Medium",
+  "entropy": 0.0083,
+  "stability": "Stable",
+  "transition_risk": {
+    "1d": 0.0031,
+    "3d": 0.0012,
+    "5d": 0.0017
+  },
+  "empirical_high_prob": 0.0073,
+  "var_1pct": -0.04663,
+  "var_5pct": -0.030562,
+  "return_range": {
+    "q10": -0.022078,
+    "q50": 0.000786,
+    "q90": 0.024339
+  },
+  "regime_stats": {
+    "Low": {
+      "mean": 0.000318,
+      "std": 0.012182,
+      "skew": -0.0556,
+      "kurt": 0.4789,
+      "var_1pct": -0.03009,
+      "var_5pct": -0.019868,
+      "q10": -0.015371,
+      "q50": 0.000505,
+      "q90": 0.015212,
+      "count": 2390
+    },
+    "Medium": {
+      "mean": 0.000837,
+      "std": 0.019056,
+      "skew": 0.0526,
+      "kurt": 1.2596,
+      "var_1pct": -0.04663,
+      "var_5pct": -0.030562,
+      "q10": -0.022078,
+      "q50": 0.000786,
+      "q90": 0.024339,
+      "count": 2197
+    },
+    "High": {
+      "mean": 0.000449,
+      "std": 0.035702,
+      "skew": 0.2891,
+      "kurt": 1.9133,
+      "var_1pct": -0.085558,
+      "var_5pct": -0.05723,
+      "q10": -0.044402,
+      "q50": -0.000105,
+      "q90": 0.045129,
+      "count": 647
+    }
+  },
+  "transition_matrix": {
+    "Low": {
+      "Low": 0.9787,
+      "Medium": 0.0213,
+      "High": 0.0
+    },
+    "Medium": {
+      "Low": 0.0228,
+      "Medium": 0.9699,
+      "High": 0.0073
+    },
+    "High": {
+      "Low": 0.0015,
+      "Medium": 0.0232,
+      "High": 0.9753
+    }
+  }
+}
