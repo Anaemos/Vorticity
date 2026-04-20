@@ -138,5 +138,12 @@
     "category": "Stock",
     "sector": "Telecom",
     "type": "stock"
+  },
+  {
+    "ticker": "INDIGO.NS",
+    "name": "InterGlobe Aviation (IndiGo)",
+    "category": "Stock",
+    "sector": "Aviation",
+    "type": "stock"
   }
 ]
