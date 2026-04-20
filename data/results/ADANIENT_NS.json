@@ -3,7 +3,7 @@
   "name": "Adani Enterprises",
   "category": "Stock",
   "sector": "Conglomerate",
-  "updated_at": "2026-04-19T20:11:09.225258+05:30",
+  "updated_at": "2026-04-20T16:31:24.714240+05:30",
   "data_through": "2026-04-17",
   "regime": "Medium",
   "entropy": 0.0094,
@@ -29,7 +29,7 @@
       "kurt": 1.259,
       "var_1pct": -0.042094,
       "var_5pct": -0.027958,
-      "q10": -0.020368,
+      "q10": -0.020369,
       "q50": 0.000411,
       "q90": 0.023189,
       "count": 2019

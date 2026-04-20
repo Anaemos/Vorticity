@@ -3,7 +3,7 @@
   "name": "Maruti Suzuki",
   "category": "Stock",
   "sector": "Auto",
-  "updated_at": "2026-04-19T20:11:05.336154+05:30",
+  "updated_at": "2026-04-20T16:31:23.007692+05:30",
   "data_through": "2026-04-17",
   "regime": "High",
   "entropy": 0.6192,
@@ -31,7 +31,7 @@
       "var_5pct": -0.018386,
       "q10": -0.013899,
       "q50": -4.7e-05,
-      "q90": 0.016372,
+      "q90": 0.016371,
       "count": 2377
     },
     "Medium": {
