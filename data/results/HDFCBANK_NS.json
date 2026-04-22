@@ -3,23 +3,23 @@
   "name": "HDFC Bank",
   "category": "Stock",
   "sector": "Private Banking",
-  "updated_at": "2026-04-22T16:30:41.979366+05:30",
-  "data_through": "2026-04-22",
+  "updated_at": "2026-04-23T02:34:50.730819+05:30",
+  "data_through": "2026-04-21",
   "regime": "High",
-  "entropy": 0.0204,
+  "entropy": 0.0012,
   "stability": "Stable",
   "transition_risk": {
     "1d": 0.9974,
     "3d": 0.9976,
     "5d": 0.9968
   },
-  "empirical_high_prob": 0.9777,
-  "var_1pct": -0.082991,
-  "var_5pct": -0.051878,
+  "empirical_high_prob": 0.9776,
+  "var_1pct": -0.082993,
+  "var_5pct": -0.051909,
   "return_range": {
-    "q10": -0.037762,
-    "q50": 4.4e-05,
-    "q90": 0.046558
+    "q10": -0.03778,
+    "q50": 8.9e-05,
+    "q90": 0.046606
   },
   "regime_stats": {
     "Low": {
@@ -43,20 +43,20 @@
       "var_5pct": -0.027647,
       "q10": -0.019982,
       "q50": 8.8e-05,
-      "q90": 0.02467,
+      "q90": 0.024669,
       "count": 1802
     },
     "High": {
-      "mean": 0.00123,
-      "std": 0.03475,
-      "skew": 0.2925,
-      "kurt": 1.3736,
-      "var_1pct": -0.082991,
-      "var_5pct": -0.051878,
-      "q10": -0.037762,
-      "q50": 4.4e-05,
-      "q90": 0.046558,
-      "count": 628
+      "mean": 0.001256,
+      "std": 0.034772,
+      "skew": 0.2904,
+      "kurt": 1.3686,
+      "var_1pct": -0.082993,
+      "var_5pct": -0.051909,
+      "q10": -0.03778,
+      "q50": 8.9e-05,
+      "q90": 0.046606,
+      "count": 627
     }
   },
   "transition_matrix": {
@@ -72,8 +72,8 @@
     },
     "High": {
       "Low": 0.0,
-      "Medium": 0.0223,
-      "High": 0.9777
+      "Medium": 0.0224,
+      "High": 0.9776
     }
   }
 }

@@ -3,18 +3,18 @@
   "name": "ICICI Bank",
   "category": "Stock",
   "sector": "Private Banking",
-  "updated_at": "2026-04-22T16:30:44.489566+05:30",
-  "data_through": "2026-04-22",
+  "updated_at": "2026-04-23T02:34:51.386294+05:30",
+  "data_through": "2026-04-21",
   "regime": "Medium",
-  "entropy": 0.0235,
+  "entropy": 0.0107,
   "stability": "Stable",
   "transition_risk": {
-    "1d": 0.0037,
-    "3d": 0.0354,
+    "1d": 0.0034,
+    "3d": 0.0362,
     "5d": 0.0301
   },
   "empirical_high_prob": 0.0073,
-  "var_1pct": -0.051423,
+  "var_1pct": -0.051425,
   "var_5pct": -0.035638,
   "return_range": {
     "q10": -0.026496,
@@ -35,26 +35,26 @@
       "count": 2322
     },
     "Medium": {
-      "mean": 0.000646,
-      "std": 0.021962,
-      "skew": 0.1655,
-      "kurt": 0.644,
-      "var_1pct": -0.051423,
+      "mean": 0.000653,
+      "std": 0.021965,
+      "skew": 0.1647,
+      "kurt": 0.6437,
+      "var_1pct": -0.051425,
       "var_5pct": -0.035638,
       "q10": -0.026496,
       "q50": 0.0,
       "q90": 0.02839,
-      "count": 2182
+      "count": 2181
     },
     "High": {
       "mean": 0.002585,
       "std": 0.044579,
-      "skew": 0.1207,
+      "skew": 0.1206,
       "kurt": 2.0947,
       "var_1pct": -0.104417,
       "var_5pct": -0.069983,
       "q10": -0.050303,
-      "q50": 0.001887,
+      "q50": 0.001886,
       "q90": 0.056819,
       "count": 733
     }
