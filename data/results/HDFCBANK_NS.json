@@ -3,7 +3,7 @@
   "name": "HDFC Bank",
   "category": "Stock",
   "sector": "Private Banking",
-  "updated_at": "2026-04-23T02:34:50.730819+05:30",
+  "updated_at": "2026-04-23T02:53:40.753049+05:30",
   "data_through": "2026-04-21",
   "regime": "High",
   "entropy": 0.0012,
@@ -43,7 +43,7 @@
       "var_5pct": -0.027647,
       "q10": -0.019982,
       "q50": 8.8e-05,
-      "q90": 0.024669,
+      "q90": 0.02467,
       "count": 1802
     },
     "High": {
