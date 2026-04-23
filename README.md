@@ -7,7 +7,7 @@
 Vorticity is a market weather engine. It is basically a machine learning pipeline that acts alongside a visual dashboard to analyze financial assets. It detects current market regimes and predicts near term volatility risks using a blend of statistical and deep learning models. 
 
 Architecture Overview
-The project relies on a decoupled architecture. We have a nightly batch processing backend that feeds a static JSON data layer. This data is then consumed by an optimized Next.js frontend.
+The project relies on a decoupled architecture. I built a nightly batch processing backend that feeds a static JSON data layer. This data is then consumed by an optimized Next.js frontend.
 
 1. Backend (Python): A robust orchestration pipeline located in pipeline.py that fetches daily market data. It calculates complex volatility features and runs inference on pre trained frozen Hidden Markov Models (HMMs) and PyTorch Temporal Fusion Transformers (TFTs).
 2. Data Layer (JSON): The pipeline outputs lightweight json files to data/results and automates pushing them to version control.
@@ -26,7 +26,9 @@ Frontend
 * TypeScript for type safe component development
 * CSS and Tailwind for modern styling and custom particle engine animations
 
-Project Structure
+## Project Structure
+
+```text
 Vorticity/
 ├── data/
 │   ├── raw/             Raw OHLCV CSVs
@@ -46,59 +48,75 @@ Vorticity/
 │   └── volatility.py    Estimators like Parkinson and Garman Klass
 ├── pipeline.py          Core orchestration script
 └── tickers.json         Master list of tracked NSE instruments
+```
 
-Our Research Journey
-This project was not built in a day. You can see the full evolution of the machine learning backend by looking at the devlogs. 
+## My Research Journey
 
-In devlogs_01 we started from scratch. We built baseline models and implemented walk forward validation to make sure our testing was rigorous. We explored different volatility estimators and spent a lot of time testing various nonlinear models. Eventually we landed on Hidden Markov Models as the most robust way to detect market regimes.
+This project was not built in a day. You can see the full evolution of my machine learning backend by looking at the devlogs. 
 
-Then in devlogs_02 we pushed the boundaries further. Instead of just knowing the current regime we wanted to predict the future. We dove into probabilistic forecasting and regime transition dynamics. We studied the underlying distribution structures of the market data. This led us to integrate Temporal Fusion Transformers to forecast the actual probabilities of regime changes over multiple time horizons.
+In devlogs_01 I started from scratch. First I built baseline models and implemented walk forward validation to make sure my testing was rigorous . Then I explored different volatility estimators and spent a lot of time testing various nonlinear models. Eventually landing on Hidden Markov Models as the most robust way to detect market regimes.
 
-Machine Learning Methodology
-1. Feature Engineering
-The engine calculates robust financial indicators. We use close to close volatility alongside Parkinson and Garman Klass estimators. We also measure price momentum using moving average ratios and lagged returns. We built custom logic to filter out split artifacts which are those sudden price movements that reverse immediately often due to stock splits or bad ticker data.
+Then in devlogs_02 I pushed the boundaries further instead of just knowing the current regime I wanted to predict the future. I dove into probabilistic forecasting and regime transition dynamics studying the underlying distribution structures of the market data. This led me to integrate Temporal Fusion Transformers to forecast the actual probabilities of regime changes over multiple time horizons.
 
-2. Regime Detection
-Vorticity uses frozen HMMs. Instead of continuously retraining unsupervised models we use pre trained models. This prevents label switching where the meaning of a state suddenly flips. It calculates state entropy to determine the stability of the model confidence. Markets are classified into three core regimes which are low medium and high volatility states.
+## Machine Learning Methodology
 
-3. Transition Risk Forecasting
-Vorticity utilizes PyTorch based TFTs to evaluate the probability of the market transitioning into a high volatility regime. We look at the next 1 day 3 day and 5 day horizons. TFTs provide excellent performance for time series forecasting.
+### 1. Feature Engineering
+The engine calculates robust financial indicators. I use close to close volatility alongside Parkinson and Garman Klass estimators. I also measure price momentum using moving average ratios and lagged returns. I built custom logic to filter out split artifacts which are those sudden price movements that reverse immediately often due to stock splits or bad ticker data.
 
-Installation and Setup
-Backend Setup
+### 2. Regime Detection
+Vorticity uses frozen HMMs instead of continuously retraining unsupervised models. I used pre trained models as it prevents label switching where the meaning of a state suddenly flips. It calculates state entropy to determine the stability of the model confidence. Markets are classified into three core regimes which are low, medium and high volatility states.
+
+### 3. Transition Risk Forecasting
+Vorticity utilizes PyTorch based TFTs to evaluate the probability of the market transitioning into a high volatility regime. It looks at the next 1 day, 3 day and 5 day horizons. TFTs are provide excellent performance for time series forecasting.
+
+## Installation and Setup
+
+### Backend Setup
 Ensure you have Python 3.9 or higher installed.
 
-git clone https://github.com/yourusername/vorticity.git
+```bash
+git clone https://github.com/Anaemos/vorticity.git
 cd vorticity
 
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+```
 
-Frontend Setup
+### Frontend Setup
 Ensure you have Node.js 18 or higher installed.
 
+```bash
 cd frontend
 npm install
 npm run dev
+```
 
 The frontend will be available at http://localhost:3000.
 
-Running the Pipeline
+## Running the Pipeline
+
 The core engine is driven by pipeline.py and it is designed to be run as a nightly job after the Indian market closes.
 
-Run the pipeline for all tickers
+Run the pipeline for all tickers:
+```bash
 python pipeline.py
+```
 
-Run the pipeline for a specific ticker
+Run the pipeline for a specific ticker:
+```bash
 python pipeline.py --ticker ^NSEI
+```
 
-Run the pipeline in dry run mode
+Run the pipeline in dry run mode:
+```bash
 python pipeline.py --dry-run
+```
 
-What happens during a run?
+### What happens during a run?
 First it fetches fresh OHLCV data via yfinance. Then it computes all technical and volatility features. It loads the frozen HMM to predict today regime and entropy. After that it computes historical distribution stats like Value at Risk and the empirical transition matrix. It runs the TFT inference to get future transition risks. It writes the json results and finally pushes the updates to Git automatically.
 
-Disclaimer
-Not Financial Advice.
+## Disclaimer
+
+**Not Financial Advice.**
 Vorticity is a quantitative research project. The regime classifications and transition forecasts provided by this engine are strictly for informational and educational purposes. Do not use this software as the sole basis for any financial or trading decisions.
