@@ -27,6 +27,7 @@ import warnings
 from datetime import datetime
 from pathlib import Path
 from typing import Optional
+from datetime import timedelta
 
 import joblib
 import numpy as np
@@ -82,7 +83,7 @@ def load_tickers(path: Path) -> list[dict]:
 
 
 def fetch_ohlcv(ticker: str, start: str) -> pd.DataFrame:
-    end = datetime.today().strftime("%Y-%m-%d")
+    end = (datetime.today() + timedelta(days=1)).strftime("%Y-%m-%d")
     log.info(f"  Fetching {ticker} ({start} to {end})")
     df = yf.download(ticker, start=start, end=end, auto_adjust=True, progress=False)
     if df.empty:
@@ -97,6 +98,27 @@ def fetch_ohlcv(ticker: str, start: str) -> pd.DataFrame:
 
 def build_features(df: pd.DataFrame) -> pd.DataFrame:
     df = add_returns(df)
+
+    # detect split artefacts vectorised: |r[i]|>50%, opposite |r[i+j]|>50%, net<5%
+    # black swans don't fully reverse within 2 days — split corrections do
+    _ret = df['return'].values
+    _drop = set()
+    for _i in range(1, len(_ret) - 2):
+        _r0 = _ret[_i]
+        if abs(_r0) <= 0.5:
+            continue
+        for _j in [1, 2]:
+            if _i + _j >= len(_ret):
+                break
+            _r1 = _ret[_i + _j]
+            if abs(_r1) > 0.5 and (_r0 * _r1 < 0) and abs((1 + _r0) * (1 + _r1) - 1) < 0.05:
+                _drop.update([_i, _i + _j])
+                break
+    if _drop:
+        _bad = df.iloc[sorted(_drop)]['Date'].tolist()
+        print(f"  Artefact detected — dropping {_bad}")
+        df = df.drop(df.index[sorted(_drop)]).reset_index(drop=True)
+
     df = add_close_to_close_volatility(df, window=20)
     df = add_lagged_returns(df, lags=(1, 5, 10))
     df = add_moving_average_features(df, windows=(5, 10, 20))
