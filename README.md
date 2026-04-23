@@ -2,6 +2,7 @@
   <img src="frontend/public/mini.svg" alt="Vorticity Logo" width="120" height="120" />
   <h1>Vorticity</h1>
   <p><strong>Daily volatility regime intelligence for Indian equities and ETFs.</strong></p>
+  <p>🌍 <strong><a href="https://vorticity.vercel.app">View Live Dashboard</a></strong></p>
 </div>
 
 Vorticity is a market weather engine. It is basically a machine learning pipeline that acts alongside a visual dashboard to analyze financial assets. It detects current market regimes and predicts near term volatility risks using a blend of statistical and deep learning models. 
@@ -84,7 +85,10 @@ pip install -r requirements.txt
 ```
 
 ### Frontend Setup
-Ensure you have Node.js 18 or higher installed.
+The Next.js dashboard is officially live and deployed on Vercel! Check it out here:
+**[https://vorticity.vercel.app](https://vorticity.vercel.app)**
+
+If you want to run the frontend locally for development, ensure you have Node.js 18 or higher installed.
 
 ```bash
 cd frontend
@@ -92,7 +96,7 @@ npm install
 npm run dev
 ```
 
-The frontend will be available at http://localhost:3000.
+The local development server will be available at http://localhost:3000.
 
 ## Running the Pipeline
 
