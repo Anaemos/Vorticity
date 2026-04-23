@@ -2,7 +2,7 @@
   <img src="frontend/public/mini.svg" alt="Vorticity Logo" width="120" height="120" />
   <h1>Vorticity</h1>
   <p><strong>Daily volatility regime intelligence for Indian equities and ETFs.</strong></p>
-  <p>🌍 <strong><a href="https://vorticity.vercel.app">View Live Dashboard</a></strong></p>
+  <p> <strong><a href="https://vorticity.vercel.app">View Live Dashboard</a></strong></p>
 </div>
 
 Vorticity is a market weather engine. It is basically a machine learning pipeline that acts alongside a visual dashboard to analyze financial assets. It detects current market regimes and predicts near term volatility risks using a blend of statistical and deep learning models. 
