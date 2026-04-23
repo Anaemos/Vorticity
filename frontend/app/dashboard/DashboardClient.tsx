@@ -50,7 +50,16 @@ export default function DashboardClient({ data }: Props) {
           <span style={{ fontSize: '9px', color: 'var(--accent)' }}>{filtered.length} showing</span>
         </div>
 
-        {filtered.length === 0 ? (
+        {data.length === 0 ? (
+          <div style={{ textAlign: 'center', padding: '60px' }}>
+            <div style={{ fontSize: '11px', color: 'var(--high)', marginBottom: '10px', letterSpacing: '0.08em' }}>
+              No data loaded
+            </div>
+            <div style={{ fontSize: '11px', color: 'var(--dim)', lineHeight: 1.8, maxWidth: '420px', margin: '0 auto', fontFamily: "'IBM Plex Sans', sans-serif" }}>
+              Could not fetch ticker data from GitHub. Check that the pipeline has run and data/results/ contains JSON files, and that your NEXT_PUBLIC_GITHUB_USER and NEXT_PUBLIC_GITHUB_REPO env vars are set correctly.
+            </div>
+          </div>
+        ) : filtered.length === 0 ? (
           <div style={{ textAlign: 'center', padding: '60px', color: 'var(--dim)', fontSize: '11px', letterSpacing: '0.1em' }}>
             No tickers match current filters.
           </div>

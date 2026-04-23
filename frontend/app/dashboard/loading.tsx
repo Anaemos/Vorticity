@@ -142,7 +142,7 @@ export default function DashboardLoading() {
           gridTemplateColumns: 'repeat(3, 1fr)',
           gap: '16px',
         }}>
-          {Array.from({ length: 9 }).map((_, i) => (
+          {Array.from({ length: 21 }).map((_, i) => (
             <SkeletonCard key={i} />
           ))}
         </div>

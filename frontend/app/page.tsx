@@ -227,7 +227,7 @@ function TypewriterIntro({ onDone }: { onDone: () => void }) {
           display:       'flex',
           alignItems:    'center',
           justifyContent:'center',
-          textShadow:    '0 0 20px rgba(0,229,255,0.30)',
+          textShadow:    '0 0 24px rgba(0,229,255,0.45), 0 0 8px rgba(0,229,255,0.25)',
         }}>
           {line2}
           {showCursor && cursorLine === 2 && (

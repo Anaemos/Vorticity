@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { fetchTickerResult, slugToTicker, TICKERS } from '@/lib/data'
 import { fmtDate, fmtUpdatedAt, REGIME_COLOR, REGIME_BG, REGIME_BORDER } from '@/lib/fmt'
 import Header from '@/components/Header'
@@ -10,6 +11,11 @@ import RegimeStatsTable from '@/components/detail/RegimeStatsTable'
 
 interface Props {
   params: Promise<{ ticker: string }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { ticker } = await params
+  return { title: `${ticker} — Vorticity` }
 }
 
 export function generateStaticParams() {

@@ -1,10 +1,17 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import { getHelpTerm, HELP_CONTENT, HELP_SLUGS, GROUP_LABELS } from '@/lib/helpContent'
 
 interface Props {
   params: Promise<{ term: string }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { term } = await params
+  const content  = getHelpTerm(term)
+  return { title: content ? `${content.title} — Vorticity` : 'Glossary — Vorticity' }
 }
 
 export function generateStaticParams() {

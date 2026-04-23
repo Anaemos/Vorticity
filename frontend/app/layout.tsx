@@ -2,7 +2,10 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Vorticity',
+  title: {
+    default:  'Vorticity',
+    template: '%s — Vorticity',
+  },
   description: 'Daily volatility regime intelligence for Indian equities and ETFs.',
 }
 

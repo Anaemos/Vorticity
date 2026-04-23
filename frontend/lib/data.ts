@@ -65,7 +65,7 @@ export async function fetchTickerResult(ticker: string): Promise<TickerResult | 
   try {
     const filename = tickerToFilename(ticker)
     const res = await fetch(`${BASE_URL}/${filename}.json`, {
-      next: { revalidate: 3600 }, // ISR: revalidate every hour
+      cache: 'no-store', // always fetch fresh — pipeline pushes new data nightly
     })
     if (!res.ok) return null
     return res.json() as Promise<TickerResult>
