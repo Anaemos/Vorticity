@@ -221,7 +221,7 @@ function TypewriterIntro({ onDone }: { onDone: () => void }) {
         <div style={{
           fontSize:      'clamp(18px, 2.6vw, 28px)',
           fontWeight:    300,
-          color:         '#96aac2',
+          color:         '#b2c7e2',
           letterSpacing: '0.06em',
           minHeight:     '1.5em',
           display:       'flex',
