@@ -74,7 +74,7 @@ export default async function TickerDetailPage({ params }: Props) {
             </div>
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '8px' }}>
+          <div className="ticker-meta" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '8px' }}>
             <div style={{ display: 'flex', gap: '8px' }}>
               <span className={`badge badge-${regimeKey}`}>{data.regime}</span>
               <span className={`badge badge-${stabKey}`}>{data.stability}</span>
@@ -100,7 +100,7 @@ export default async function TickerDetailPage({ params }: Props) {
       {/* panels - centered with max width */}
       <div className="page-enter" style={{ padding: '28px', display: 'flex', justifyContent: 'center' }}>
         <div style={{ width: '100%', maxWidth: '1100px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+          <div className="detail-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
             <RiskPanel data={data} />
             <TransitionMatrix data={data} />
           </div>

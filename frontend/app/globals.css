@@ -213,3 +213,9 @@ body::before {
     text-align: center !important;
   }
 }
+
+/* ── ticker detail page ── */
+@media (max-width: 768px) {
+  .detail-grid { grid-template-columns: 1fr !important; }
+  .ticker-meta { align-items: flex-start !important; }
+}

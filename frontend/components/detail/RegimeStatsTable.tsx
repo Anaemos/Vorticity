@@ -38,7 +38,8 @@ export default function RegimeStatsTable({ data }: Props) {
         Full distribution stats per regime across all historical data. Current regime highlighted.
       </div>
 
-      <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+      <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+      <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: '360px' }}>
         <thead>
           <tr>
             <th style={{ textAlign: 'left', padding: '0 0 10px', width: '160px' }} />
@@ -94,6 +95,7 @@ export default function RegimeStatsTable({ data }: Props) {
           ))}
         </tbody>
       </table>
+      </div>
     </div>
   )
 }
