@@ -70,14 +70,14 @@ export default function Header({ dataThrough }: Props) {
       {/* right side */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
         {dataThrough && (
-          <div style={{ fontSize: '10px', color: 'var(--dim)' }}>
+          <div className="header-meta" style={{ fontSize: '10px', color: 'var(--dim)' }}>
             data through <span style={{ color: 'var(--muted)' }}>{dataThrough}</span>
           </div>
         )}
         <Link href="/help" style={{ fontSize: '10px', color: 'var(--muted)', textDecoration: 'none', letterSpacing: '0.06em' }}>
           HELP
         </Link>
-        <div style={{ fontSize: '11px', color: 'var(--muted)', letterSpacing: '0.04em' }}>
+        <div className="header-meta" style={{ fontSize: '11px', color: 'var(--muted)', letterSpacing: '0.04em' }}>
           <span style={{ color: 'var(--accent)' }}>{time || '--:--:--'}</span> IST
         </div>
         <span style={{

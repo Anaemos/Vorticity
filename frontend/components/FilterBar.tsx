@@ -65,6 +65,7 @@ export default function FilterBar({ regime, stability, sort, onRegime, onStabili
           cursor: 'pointer',
           outline: 'none',
           letterSpacing: '0.04em',
+          flexShrink: 0,
         }}
       >
         <option value="ticker">Sort: Ticker A-Z</option>

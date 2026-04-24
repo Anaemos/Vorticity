@@ -261,10 +261,14 @@ export default function SplashPage() {
 
   const [phase, setPhase] = useState<'intro' | 'landing'>('intro')
   const [landingVisible, setLandingVisible] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768)
+  }, [])
 
   const handleIntroDone = () => {
     setPhase('landing')
-    // slight delay so intro has fully faded before landing fades in
     setTimeout(() => setLandingVisible(true), 80)
   }
 
@@ -285,7 +289,7 @@ export default function SplashPage() {
         opacity:        landingVisible ? 1 : 0,
         transition:     'opacity 0.6s ease',
       }}>
-        <ParticleEffect contentRef={contentRef} />
+        {!isMobile && <ParticleEffect contentRef={contentRef} />}
 
         <div
           ref={contentRef}

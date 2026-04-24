@@ -194,3 +194,13 @@ body::before {
 .page-enter {
   animation: pageFade 0.30s ease both;
 }
+
+/* ── mobile responsive ── */
+@media (max-width: 640px) {
+  .header-meta { display: none !important; }
+}
+
+/* ── dashboard grid: force 1 col on mobile ── */
+@media (max-width: 768px) {
+  .dashboard-grid { grid-template-columns: 1fr !important; }
+}

@@ -64,7 +64,7 @@ export default function DashboardClient({ data }: Props) {
             No tickers match current filters.
           </div>
         ) : (
-          <div style={{
+          <div className="dashboard-grid" style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(3, 1fr)',
             gap: '16px',
