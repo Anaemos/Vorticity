@@ -1,0 +1,17 @@
+Vorticity
+Copyright 2026 Aryavart Singh Payal
+
+Vorticity is a volatility regime intelligence engine for Indian equities and ETFs.
+
+This software uses the following open source components:
+
+- PyTorch (BSD-3-Clause License) — https://pytorch.org  
+- PyTorch Forecasting (MIT License) — https://github.com/sktime/pytorch-forecasting  
+- PyTorch Lightning (Apache License 2.0) — https://lightning.ai  
+- hmmlearn (BSD-3-Clause License) — https://hmmlearn.readthedocs.io  
+- scikit-learn (BSD-3-Clause License) — https://scikit-learn.org  
+- XGBoost (Apache License 2.0) — https://xgboost.readthedocs.io  
+- pandas (BSD-3-Clause License) — https://pandas.pydata.org  
+- NumPy (BSD-3-Clause License) — https://numpy.org  
+- yfinance (Apache License 2.0) — https://github.com/ranaroussi/yfinance  
+- Next.js (MIT License) — https://nextjs.org  
