@@ -98,8 +98,8 @@ export default async function TickerDetailPage({ params }: Props) {
       </div>
 
       {/* panels - centered with max width */}
-      <div className="page-enter" style={{ padding: '28px', display: 'flex', justifyContent: 'center' }}>
-        <div style={{ width: '100%', maxWidth: '1100px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+      <div className="page-enter detail-panels" style={{ padding: '28px', display: 'flex', justifyContent: 'center', overflow: 'hidden' }}>
+        <div style={{ width: '100%', maxWidth: '1100px', minWidth: 0, display: 'flex', flexDirection: 'column', gap: '16px' }}>
           <div className="detail-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
             <RiskPanel data={data} />
             <TransitionMatrix data={data} />

@@ -195,27 +195,37 @@ body::before {
   animation: pageFade 0.30s ease both;
 }
 
-/* ── mobile responsive ── */
-@media (max-width: 640px) {
+/* ════════════════════════════════════════
+   MOBILE  (≤ 768 px)
+   ════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* prevent page-level horizontal scroll */
+  html, body { overflow-x: hidden; max-width: 100vw; }
+
+  /* header: hide clock and data-through */
   .header-meta { display: none !important; }
-}
 
-/* ── dashboard grid: force 1 col on mobile ── */
-@media (max-width: 768px) {
+  /* dashboard: 1-column card grid */
   .dashboard-grid { grid-template-columns: 1fr !important; }
-}
 
-/* ── landing footnote: static on mobile so it doesn't overlap ── */
-@media (max-width: 768px) {
+  /* landing footnote: flow in page, not fixed overlay */
   .landing-footnote {
     position: static !important;
     margin-top: 32px;
     text-align: center !important;
   }
-}
 
-/* ── ticker detail page ── */
-@media (max-width: 768px) {
+  /* ticker detail: stack the two top panels vertically */
   .detail-grid { grid-template-columns: 1fr !important; }
+
+  /* ticker hero meta: left-align on mobile */
   .ticker-meta { align-items: flex-start !important; }
+
+  /* ticker detail panels: reduce padding so content fits */
+  .detail-panels { padding: 16px 12px !important; }
+
+  /* RiskPanel row label: let it shrink so content has room */
+  .risk-row { flex-wrap: wrap !important; gap: '8px' !important; }
+  .risk-row-label { width: 100px !important; font-size: 8px !important; }
 }
