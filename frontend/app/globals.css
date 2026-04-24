@@ -204,3 +204,12 @@ body::before {
 @media (max-width: 768px) {
   .dashboard-grid { grid-template-columns: 1fr !important; }
 }
+
+/* ── landing footnote: static on mobile so it doesn't overlap ── */
+@media (max-width: 768px) {
+  .landing-footnote {
+    position: static !important;
+    margin-top: 32px;
+    text-align: center !important;
+  }
+}

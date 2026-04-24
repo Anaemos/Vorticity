@@ -188,6 +188,7 @@ function TypewriterIntro({ onDone }: { onDone: () => void }) {
         fontFamily:    "'IBM Plex Mono', monospace",
         textAlign:     'center',
         padding:       '0 32px',
+        maxWidth:      '90vw',
       }}>
         {/* line 1 */}
         <div style={{
@@ -195,21 +196,19 @@ function TypewriterIntro({ onDone }: { onDone: () => void }) {
           fontWeight:    500,
           color:         '#e8f3fc',
           letterSpacing: '0.04em',
-          minHeight:     '1.5em',
           marginBottom:  '16px',
           textShadow:    '0 0 24px rgba(0,229,255,0.45), 0 0 8px rgba(0,229,255,0.25)',
-          display:       'flex',
-          alignItems:    'center',
-          justifyContent:'center',
+          position:      'relative',
+          lineHeight:    1.5,
         }}>
           {line1}
           {showCursor && cursorLine === 1 && (
             <span style={{
               display:       'inline-block',
               width:         '2px',
-              height:        '1em',
+              height:        '0.75em',
               background:    'var(--accent)',
-              marginLeft:    '4px',
+              marginLeft:    '3px',
               verticalAlign: 'middle',
               boxShadow:     '0 0 6px var(--accent)',
               animation:     'blink 0.75s step-end infinite',
@@ -219,24 +218,22 @@ function TypewriterIntro({ onDone }: { onDone: () => void }) {
 
         {/* line 2 */}
         <div style={{
-          fontSize:      'clamp(18px, 2.6vw, 28px)',
+          fontSize:      'clamp(16px, 2.6vw, 28px)',
           fontWeight:    300,
           color:         '#b2c7e2',
           letterSpacing: '0.06em',
-          minHeight:     '1.5em',
-          display:       'flex',
-          alignItems:    'center',
-          justifyContent:'center',
           textShadow:    '0 0 24px rgba(0,229,255,0.45), 0 0 8px rgba(0,229,255,0.25)',
+          position:      'relative',
+          lineHeight:    1.5,
         }}>
           {line2}
           {showCursor && cursorLine === 2 && (
             <span style={{
               display:       'inline-block',
               width:         '2px',
-              height:        '1em',
+              height:        '0.75em',
               background:    'var(--accent)',
-              marginLeft:    '4px',
+              marginLeft:    '3px',
               verticalAlign: 'middle',
               boxShadow:     '0 0 6px var(--accent)',
               animation:     'blink 0.75s step-end infinite',
@@ -261,14 +258,10 @@ export default function SplashPage() {
 
   const [phase, setPhase] = useState<'intro' | 'landing'>('intro')
   const [landingVisible, setLandingVisible] = useState(false)
-  const [isMobile, setIsMobile] = useState(false)
-
-  useEffect(() => {
-    setIsMobile(window.innerWidth < 768)
-  }, [])
 
   const handleIntroDone = () => {
     setPhase('landing')
+    // slight delay so intro has fully faded before landing fades in
     setTimeout(() => setLandingVisible(true), 80)
   }
 
@@ -289,7 +282,7 @@ export default function SplashPage() {
         opacity:        landingVisible ? 1 : 0,
         transition:     'opacity 0.6s ease',
       }}>
-        {!isMobile && <ParticleEffect contentRef={contentRef} />}
+        <ParticleEffect contentRef={contentRef} />
 
         <div
           ref={contentRef}
@@ -410,7 +403,7 @@ export default function SplashPage() {
         </div>
 
         {/* footnote */}
-        <div style={{
+        <div className="landing-footnote" style={{
           position:      'fixed',
           bottom:        '20px',
           right:         '24px',
