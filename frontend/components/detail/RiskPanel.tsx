@@ -28,6 +28,9 @@ export default function RiskPanel({ data }: Props) {
         TFT probability of entering High regime
       </div>
 
+      <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+      <div style={{ minWidth: '420px' }}>
+
       {/* transition risk gauges */}
       <Row label="Transition risk">
         <div style={{ display: 'flex', gap: '16px' }}>
@@ -99,6 +102,8 @@ export default function RiskPanel({ data }: Props) {
           </span>
         </div>
       </Row>
+      </div>
+      </div>
     </div>
   )
 }

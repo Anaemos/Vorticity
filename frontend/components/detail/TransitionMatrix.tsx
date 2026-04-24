@@ -26,7 +26,8 @@ export default function TransitionMatrix({ data }: Props) {
         Historical probability of regime-to-regime moves (row = today, column = tomorrow)
       </div>
 
-      <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+      <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+      <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: '280px' }}>
         <thead>
           <tr>
             <th style={{ width: '80px' }} />
@@ -86,6 +87,7 @@ export default function TransitionMatrix({ data }: Props) {
           })}
         </tbody>
       </table>
+      </div>
 
       <div style={{ marginTop: '14px', fontSize: '10px', color: 'var(--dim)', lineHeight: 1.6 }}>
         Diagonal = regime persists. Off-diagonal = regime changes. Current row highlighted.
