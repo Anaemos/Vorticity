@@ -23,6 +23,7 @@ import json
 import logging
 import subprocess
 import sys
+import time
 import warnings
 from datetime import datetime
 from pathlib import Path
@@ -82,18 +83,27 @@ def load_tickers(path: Path) -> list[dict]:
     return tickers
 
 
-def fetch_ohlcv(ticker: str, start: str) -> pd.DataFrame:
+def fetch_ohlcv(ticker: str, start: str, max_retries: int = 3) -> pd.DataFrame:
     end = (datetime.today() + timedelta(days=1)).strftime("%Y-%m-%d")
     log.info(f"  Fetching {ticker} ({start} to {end})")
-    df = yf.download(ticker, start=start, end=end, auto_adjust=True, progress=False)
-    if df.empty:
-        raise ValueError(f"No data for {ticker}")
-    if isinstance(df.columns, pd.MultiIndex):
-        df.columns = df.columns.get_level_values(0)
-    df = df.reset_index()[["Date", "Open", "High", "Low", "Close", "Volume"]]
-    df = df.sort_values("Date").dropna().reset_index(drop=True)
-    log.info(f"  {ticker}: {len(df)} rows, last date {df['Date'].max().date()}")
-    return df
+    
+    for attempt in range(max_retries):
+        try:
+            df = yf.download(ticker, start=start, end=end, auto_adjust=True, progress=False)
+            if df.empty:
+                raise ValueError(f"No data for {ticker}")
+            if isinstance(df.columns, pd.MultiIndex):
+                df.columns = df.columns.get_level_values(0)
+            df = df.reset_index()[["Date", "Open", "High", "Low", "Close", "Volume"]]
+            df = df.sort_values("Date").dropna().reset_index(drop=True)
+            log.info(f"  {ticker}: {len(df)} rows, last date {df['Date'].max().date()}")
+            return df
+        except Exception as e:
+            log.warning(f"  Attempt {attempt + 1}/{max_retries} failed for {ticker}: {e}")
+            if attempt < max_retries - 1:
+                time.sleep(2 ** attempt)  # exponential backoff
+            else:
+                raise
 
 
 def build_features(df: pd.DataFrame) -> pd.DataFrame:
