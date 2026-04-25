@@ -3,7 +3,7 @@
   "name": "Bharti Airtel",
   "category": "Stock",
   "sector": "Telecom",
-  "updated_at": "2026-04-25T18:32:46.972075+05:30",
+  "updated_at": "2026-04-25T18:58:10.344401+05:30",
   "data_through": "2026-04-24",
   "regime": "Low",
   "entropy": 0.0028,
@@ -54,7 +54,7 @@
       "var_1pct": -0.073334,
       "var_5pct": -0.046643,
       "q10": -0.033353,
-      "q50": 0.000262,
+      "q50": 0.000261,
       "q90": 0.03888,
       "count": 1314
     }
