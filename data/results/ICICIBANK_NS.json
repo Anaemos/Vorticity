@@ -3,7 +3,7 @@
   "name": "ICICI Bank",
   "category": "Stock",
   "sector": "Private Banking",
-  "updated_at": "2026-04-25T18:03:44.405331+05:30",
+  "updated_at": "2026-04-25T18:32:24.549382+05:30",
   "data_through": "2026-04-24",
   "regime": "Medium",
   "entropy": 0.0193,
@@ -54,7 +54,7 @@
       "var_1pct": -0.104417,
       "var_5pct": -0.069983,
       "q10": -0.050303,
-      "q50": 0.001886,
+      "q50": 0.001887,
       "q90": 0.056819,
       "count": 733
     }
