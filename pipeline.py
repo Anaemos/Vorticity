@@ -260,7 +260,7 @@ def git_push(project_root: Path) -> None:
     date_str = datetime.today().strftime("%Y-%m-%d")
     try:
         subprocess.run(["git", "add", "data/results/"], cwd=project_root, check=True, capture_output=True)
-        subprocess.run(["git", "commit", "-m", f"weather update: {date_str}"], cwd=project_root, check=True, capture_output=True)
+        subprocess.run(["git", "commit", "-m", f"weather update: {date_str} [skip ci]"], cwd=project_root, check=True, capture_output=True)
         subprocess.run(["git", "push"], cwd=project_root, check=True, capture_output=True)
         log.info(f"Git push done ({date_str})")
     except subprocess.CalledProcessError as e:
