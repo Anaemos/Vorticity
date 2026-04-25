@@ -16,6 +16,16 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png',
   },
   manifest: '/site.webmanifest',
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: 'Vorticity',
+    description: 'Daily volatility regime intelligence for Indian equities and ETFs.',
+    type: 'website',
+    locale: 'en_IN',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
