@@ -3,7 +3,7 @@
   "name": "Axis Bank",
   "category": "Stock",
   "sector": "Private Banking",
-  "updated_at": "2026-04-24T16:31:05.425849+05:30",
+  "updated_at": "2026-04-25T17:56:48.572368+05:30",
   "data_through": "2026-04-24",
   "regime": "Medium",
   "entropy": 0.0112,
@@ -54,7 +54,7 @@
       "var_1pct": -0.08649,
       "var_5pct": -0.055129,
       "q10": -0.042445,
-      "q50": 0.000197,
+      "q50": 0.000198,
       "q90": 0.046958,
       "count": 1389
     }

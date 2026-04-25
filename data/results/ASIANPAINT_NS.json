@@ -3,7 +3,7 @@
   "name": "Asian Paints",
   "category": "Stock",
   "sector": "Consumer Discretionary",
-  "updated_at": "2026-04-24T16:31:12.964687+05:30",
+  "updated_at": "2026-04-25T17:57:00.407821+05:30",
   "data_through": "2026-04-24",
   "regime": "High",
   "entropy": 0.0012,
@@ -41,7 +41,7 @@
       "kurt": 0.7887,
       "var_1pct": -0.037644,
       "var_5pct": -0.025351,
-      "q10": -0.018426,
+      "q10": -0.018425,
       "q50": 0.000465,
       "q90": 0.021974,
       "count": 1880
