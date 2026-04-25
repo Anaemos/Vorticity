@@ -5,18 +5,18 @@
   <p> <strong><a href="https://vorticity.vercel.app">View Live Dashboard</a></strong></p>
 </div>
 
-Vorticity is a market weather engine. It is basically a machine learning pipeline that acts alongside a visual dashboard to analyze financial assets. It detects current market regimes and predicts near term volatility risks using a blend of statistical and deep learning models. 
+Vorticity is a market weather engine. It is a machine learning pipeline that acts alongside a visual dashboard to analyze financial assets. It detects current market regimes and predicts near term volatility risks using a blend of statistical and deep learning models. 
 
 Architecture Overview
 The project relies on a decoupled architecture. I built a nightly batch processing backend that feeds a static JSON data layer. This data is then consumed by an optimized Next.js frontend.
 
 1. Backend (Python): A robust orchestration pipeline located in pipeline.py that fetches daily market data. It calculates complex volatility features and runs inference on pre trained frozen Hidden Markov Models (HMMs) and PyTorch Temporal Fusion Transformers (TFTs).
 2. Data Layer (JSON): The pipeline outputs lightweight json files to data/results and automates pushing them to version control.
-3. Frontend (Next.js): An interactive dashboard that visualizes regime states and transition risks. It also handles statistical distribution data for end users without requiring a live complex database backend.
+3. Frontend (Next.js): An interactive dashboard that visualizes regime states and transition risks. It also handles statistical data for end users without requiring a live complex database backend.
 
 Technology Stack
 Backend and Machine Learning
-* Python 3.9+
+* Python 3.11+
 * PyTorch and PyTorch Forecasting for Temporal Fusion Transformers
 * scikit learn and hmmlearn for Hidden Markov Models used in unsupervised regime detection
 * Pandas and NumPy for core data manipulation and financial feature engineering
@@ -68,12 +68,12 @@ The engine calculates robust financial indicators. I use close to close volatili
 Vorticity uses frozen HMMs instead of continuously retraining unsupervised models. I used pre trained models as it prevents label switching where the meaning of a state suddenly flips. It calculates state entropy to determine the stability of the model confidence. Markets are classified into three core regimes which are low, medium and high volatility states.
 
 ### 3. Transition Risk Forecasting
-Vorticity utilizes PyTorch based TFTs to evaluate the probability of the market transitioning into a high volatility regime. It looks at the next 1 day, 3 day and 5 day horizons. TFTs are provide excellent performance for time series forecasting.
+Vorticity utilizes PyTorch based TFTs to evaluate the probability of the market transitioning into a high volatility regime. It looks at the next 1 day, 3 day and 5 day horizons. TFTs provide excellent performance for time series forecasting.
 
 ## Installation and Setup
 
 ### Backend Setup
-Ensure you have Python 3.9 or higher installed.
+Ensure you have Python 3.11.9 or higher installed.
 
 ```bash
 git clone https://github.com/Anaemos/vorticity.git
@@ -88,7 +88,7 @@ pip install -r requirements.txt
 The Next.js dashboard is officially live and deployed on Vercel! Check it out here:
 **[https://vorticity.vercel.app](https://vorticity.vercel.app)**
 
-If you want to run the frontend locally for development, ensure you have Node.js 18 or higher installed.
+If you want to run the frontend locally for development, ensure you have Node.js 16 or higher installed.
 
 ```bash
 cd frontend
@@ -123,4 +123,4 @@ First it fetches fresh OHLCV data via yfinance. Then it computes all technical a
 ## Disclaimer
 
 **Not Financial Advice.**
-Vorticity is a quantitative research project. The regime classifications and transition forecasts provided by this engine are strictly for informational and educational purposes. Do not use this software as the sole basis for any financial or trading decisions.
+Vorticity is a quantitative machine learning project. The regime classifications and transition forecasts provided by this engine are strictly for informational and educational purposes. Do not use this software as the sole basis for any financial or trading decisions.
