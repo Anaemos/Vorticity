@@ -3,18 +3,18 @@
   "name": "Nippon Nifty BeES",
   "category": "ETF",
   "sector": "Broad Market",
-  "updated_at": "2026-05-11T22:45:03.589386+05:30",
-  "data_through": "2026-05-11",
+  "updated_at": "2026-05-12T16:30:38.244436+05:30",
+  "data_through": "2026-05-12",
   "regime": "Low",
-  "entropy": 0.6677,
+  "entropy": 0.9455,
   "stability": "Unstable",
   "transition_risk": {
     "1d": 0.0063,
     "3d": 0.0238,
-    "5d": 0.0429
+    "5d": 0.0428
   },
   "empirical_high_prob": 0.0023,
-  "var_1pct": -0.02067,
+  "var_1pct": -0.020819,
   "var_5pct": -0.013755,
   "return_range": {
     "q10": -0.009903,
@@ -23,11 +23,11 @@
   },
   "regime_stats": {
     "Low": {
-      "mean": 0.000155,
-      "std": 0.00794,
-      "skew": -0.2442,
-      "kurt": 0.9852,
-      "var_1pct": -0.02067,
+      "mean": 0.000145,
+      "std": 0.007971,
+      "skew": -0.2736,
+      "kurt": 1.0776,
+      "var_1pct": -0.020819,
       "var_5pct": -0.013755,
       "q10": -0.009903,
       "q50": 0.000562,
