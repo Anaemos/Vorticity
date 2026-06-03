@@ -3,23 +3,23 @@
   "name": "Infosys",
   "category": "Stock",
   "sector": "IT",
-  "updated_at": "2026-06-02T16:30:48.110266+05:30",
-  "data_through": "2026-06-02",
+  "updated_at": "2026-06-03T18:34:00.675062+05:30",
+  "data_through": "2026-06-03",
   "regime": "High",
-  "entropy": 0.2516,
-  "stability": "Unstable",
+  "entropy": 0.0002,
+  "stability": "Stable",
   "transition_risk": {
-    "1d": 0.9913,
-    "3d": 0.9935,
-    "5d": 0.991
+    "1d": 0.986,
+    "3d": 0.9934,
+    "5d": 0.989
   },
   "empirical_high_prob": 0.9733,
-  "var_1pct": -0.082769,
+  "var_1pct": -0.082747,
   "var_5pct": -0.042869,
   "return_range": {
-    "q10": -0.029069,
+    "q10": -0.029476,
     "q50": 0.0,
-    "q90": 0.029827
+    "q90": 0.029806
   },
   "regime_stats": {
     "Low": {
@@ -47,16 +47,16 @@
       "count": 1753
     },
     "High": {
-      "mean": 0.000167,
-      "std": 0.028353,
-      "skew": -0.2902,
-      "kurt": 6.407,
-      "var_1pct": -0.082769,
+      "mean": 0.000136,
+      "std": 0.028362,
+      "skew": -0.2884,
+      "kurt": 6.3885,
+      "var_1pct": -0.082747,
       "var_5pct": -0.042869,
-      "q10": -0.029069,
+      "q10": -0.029476,
       "q50": 0.0,
-      "q90": 0.029827,
-      "count": 1238
+      "q90": 0.029806,
+      "count": 1239
     }
   },
   "transition_matrix": {
@@ -72,7 +72,7 @@
     },
     "High": {
       "Low": 0.0121,
-      "Medium": 0.0146,
+      "Medium": 0.0145,
       "High": 0.9733
     }
   }
