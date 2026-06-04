@@ -3,10 +3,10 @@
   "name": "Hindustan Unilever",
   "category": "Stock",
   "sector": "FMCG",
-  "updated_at": "2026-06-03T18:34:02.253012+05:30",
-  "data_through": "2026-06-03",
+  "updated_at": "2026-06-04T16:30:39.174425+05:30",
+  "data_through": "2026-06-04",
   "regime": "Medium",
-  "entropy": 0.2299,
+  "entropy": 0.4597,
   "stability": "Unstable",
   "transition_risk": {
     "1d": 0.0056,
@@ -14,12 +14,12 @@
     "5d": 0.0433
   },
   "empirical_high_prob": 0.0184,
-  "var_1pct": -0.033709,
-  "var_5pct": -0.021977,
+  "var_1pct": -0.0337,
+  "var_5pct": -0.021975,
   "return_range": {
-    "q10": -0.016658,
-    "q50": -0.000359,
-    "q90": 0.017833
+    "q10": -0.016657,
+    "q50": -0.000366,
+    "q90": 0.017827
   },
   "regime_stats": {
     "Low": {
@@ -35,16 +35,16 @@
       "count": 1622
     },
     "Medium": {
-      "mean": 4.3e-05,
-      "std": 0.013931,
-      "skew": 0.0824,
-      "kurt": 0.7082,
-      "var_1pct": -0.033709,
-      "var_5pct": -0.021977,
-      "q10": -0.016658,
-      "q50": -0.000359,
-      "q90": 0.017833,
-      "count": 2070
+      "mean": 4e-05,
+      "std": 0.013928,
+      "skew": 0.0829,
+      "kurt": 0.7095,
+      "var_1pct": -0.0337,
+      "var_5pct": -0.021975,
+      "q10": -0.016657,
+      "q50": -0.000366,
+      "q90": 0.017827,
+      "count": 2071
     },
     "High": {
       "mean": 0.001572,
