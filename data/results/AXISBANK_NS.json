@@ -3,36 +3,36 @@
   "name": "Axis Bank",
   "category": "Stock",
   "sector": "Private Banking",
-  "updated_at": "2026-06-04T16:30:35.268364+05:30",
-  "data_through": "2026-06-04",
+  "updated_at": "2026-06-05T16:30:35.360966+05:30",
+  "data_through": "2026-06-05",
   "regime": "Low",
-  "entropy": 0.0013,
+  "entropy": 0.0016,
   "stability": "Stable",
   "transition_risk": {
     "1d": 0.9949,
-    "3d": 0.9461,
-    "5d": 0.9826
+    "3d": 0.9141,
+    "5d": 0.9823
   },
   "empirical_high_prob": 0.001,
-  "var_1pct": -0.030117,
+  "var_1pct": -0.030113,
   "var_5pct": -0.020666,
   "return_range": {
-    "q10": -0.015286,
-    "q50": 0.000206,
+    "q10": -0.015283,
+    "q50": 0.000219,
     "q90": 0.017375
   },
   "regime_stats": {
     "Low": {
-      "mean": 0.000613,
-      "std": 0.013301,
-      "skew": 0.1283,
-      "kurt": 0.7525,
-      "var_1pct": -0.030117,
+      "mean": 0.00062,
+      "std": 0.013302,
+      "skew": 0.1272,
+      "kurt": 0.7502,
+      "var_1pct": -0.030113,
       "var_5pct": -0.020666,
-      "q10": -0.015286,
-      "q50": 0.000206,
+      "q10": -0.015283,
+      "q50": 0.000219,
       "q90": 0.017375,
-      "count": 1927
+      "count": 1928
     },
     "Medium": {
       "mean": 0.001041,
