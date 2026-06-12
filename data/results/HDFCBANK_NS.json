@@ -3,48 +3,48 @@
   "name": "HDFC Bank",
   "category": "Stock",
   "sector": "Private Banking",
-  "updated_at": "2026-06-11T16:30:38.880784+05:30",
-  "data_through": "2026-06-11",
-  "regime": "Low",
-  "entropy": 0.0507,
-  "stability": "Stable",
+  "updated_at": "2026-06-12T18:51:51.967581+05:30",
+  "data_through": "2026-06-12",
+  "regime": "Medium",
+  "entropy": 0.7058,
+  "stability": "Unstable",
   "transition_risk": {
-    "1d": 0.9975,
+    "1d": 0.9974,
     "3d": 0.9975,
     "5d": 0.9968
   },
-  "empirical_high_prob": 0.0007,
-  "var_1pct": -0.026117,
-  "var_5pct": -0.015993,
+  "empirical_high_prob": 0.0065,
+  "var_1pct": -0.041915,
+  "var_5pct": -0.02731,
   "return_range": {
-    "q10": -0.012133,
-    "q50": 0.000586,
-    "q90": 0.013881
+    "q10": -0.01978,
+    "q50": 0.0,
+    "q90": 0.024686
   },
   "regime_stats": {
     "Low": {
-      "mean": 0.000581,
-      "std": 0.010471,
-      "skew": 0.0253,
-      "kurt": 0.7718,
-      "var_1pct": -0.026117,
-      "var_5pct": -0.015993,
-      "q10": -0.012133,
-      "q50": 0.000586,
-      "q90": 0.013881,
-      "count": 2812
+      "mean": 0.000587,
+      "std": 0.010474,
+      "skew": 0.0242,
+      "kurt": 0.7729,
+      "var_1pct": -0.026136,
+      "var_5pct": -0.016008,
+      "q10": -0.01217,
+      "q50": 0.00059,
+      "q90": 0.013896,
+      "count": 2807
     },
     "Medium": {
-      "mean": 0.001024,
-      "std": 0.01781,
-      "skew": 0.2035,
-      "kurt": 0.7976,
-      "var_1pct": -0.042014,
-      "var_5pct": -0.027349,
-      "q10": -0.019806,
-      "q50": 1.5e-05,
-      "q90": 0.024669,
-      "count": 1832
+      "mean": 0.001035,
+      "std": 0.017807,
+      "skew": 0.2056,
+      "kurt": 0.797,
+      "var_1pct": -0.041915,
+      "var_5pct": -0.02731,
+      "q10": -0.01978,
+      "q50": 0.0,
+      "q90": 0.024686,
+      "count": 1838
     },
     "High": {
       "mean": 0.001198,
@@ -62,13 +62,13 @@
   "transition_matrix": {
     "Low": {
       "Low": 0.9875,
-      "Medium": 0.0117,
+      "Medium": 0.0118,
       "High": 0.0007
     },
     "Medium": {
-      "Low": 0.0197,
-      "Medium": 0.9738,
-      "High": 0.0066
+      "Low": 0.0191,
+      "Medium": 0.9744,
+      "High": 0.0065
     },
     "High": {
       "Low": 0.0,
