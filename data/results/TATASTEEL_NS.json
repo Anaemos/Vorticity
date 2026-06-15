@@ -3,36 +3,36 @@
   "name": "Tata Steel",
   "category": "Stock",
   "sector": "Metals",
-  "updated_at": "2026-06-12T18:52:06.284555+05:30",
-  "data_through": "2026-06-12",
-  "regime": "Medium",
-  "entropy": 0.6625,
+  "updated_at": "2026-06-15T16:30:59.570840+05:30",
+  "data_through": "2026-06-15",
+  "regime": "Low",
+  "entropy": 0.6553,
   "stability": "Unstable",
   "transition_risk": {
-    "1d": 0.001,
-    "3d": 0.0509,
-    "5d": 0.0592
+    "1d": 0.9936,
+    "3d": 0.9882,
+    "5d": 0.9929
   },
-  "empirical_high_prob": 0.0187,
-  "var_1pct": -0.054575,
-  "var_5pct": -0.033136,
+  "empirical_high_prob": 0.0,
+  "var_1pct": -0.040914,
+  "var_5pct": -0.025617,
   "return_range": {
-    "q10": -0.024734,
-    "q50": -0.001059,
-    "q90": 0.022458
+    "q10": -0.019716,
+    "q50": 0.001558,
+    "q90": 0.024974
   },
   "regime_stats": {
     "Low": {
-      "mean": 0.002185,
-      "std": 0.017932,
-      "skew": 0.2268,
-      "kurt": 0.6495,
-      "var_1pct": -0.040921,
-      "var_5pct": -0.025637,
-      "q10": -0.019719,
-      "q50": 0.00156,
-      "q90": 0.024977,
-      "count": 1815
+      "mean": 0.002182,
+      "std": 0.017928,
+      "skew": 0.2273,
+      "kurt": 0.6513,
+      "var_1pct": -0.040914,
+      "var_5pct": -0.025617,
+      "q10": -0.019716,
+      "q50": 0.001558,
+      "q90": 0.024974,
+      "count": 1816
     },
     "Medium": {
       "mean": -0.000971,
