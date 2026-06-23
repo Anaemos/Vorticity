@@ -3,10 +3,10 @@
   "name": "Bharti Airtel",
   "category": "Stock",
   "sector": "Telecom",
-  "updated_at": "2026-06-23T13:41:36.034161+05:30",
+  "updated_at": "2026-06-23T16:32:01.213239+05:30",
   "data_through": "2026-06-23",
   "regime": "Low",
-  "entropy": 0.0004,
+  "entropy": 0.0005,
   "stability": "Stable",
   "transition_risk": {
     "1d": 0.9917,
@@ -23,10 +23,10 @@
   },
   "regime_stats": {
     "Low": {
-      "mean": 0.000844,
+      "mean": 0.000842,
       "std": 0.013087,
-      "skew": 0.2276,
-      "kurt": 0.8443,
+      "skew": 0.2278,
+      "kurt": 0.8436,
       "var_1pct": -0.030806,
       "var_5pct": -0.020557,
       "q10": -0.014793,
@@ -54,7 +54,7 @@
       "var_1pct": -0.073334,
       "var_5pct": -0.046643,
       "q10": -0.033353,
-      "q50": 0.000261,
+      "q50": 0.000262,
       "q90": 0.03888,
       "count": 1314
     }

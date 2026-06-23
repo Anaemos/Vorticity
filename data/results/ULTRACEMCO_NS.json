@@ -3,10 +3,10 @@
   "name": "UltraTech Cement",
   "category": "Stock",
   "sector": "Cement & Infrastructure",
-  "updated_at": "2026-06-23T13:41:19.289341+05:30",
+  "updated_at": "2026-06-23T16:31:22.813133+05:30",
   "data_through": "2026-06-23",
   "regime": "Low",
-  "entropy": 0.6127,
+  "entropy": 0.6152,
   "stability": "Unstable",
   "transition_risk": {
     "1d": 0.9988,
@@ -23,10 +23,10 @@
   },
   "regime_stats": {
     "Low": {
-      "mean": 0.000622,
+      "mean": 0.000623,
       "std": 0.015458,
       "skew": 0.0618,
-      "kurt": 0.8301,
+      "kurt": 0.8305,
       "var_1pct": -0.037774,
       "var_5pct": -0.02458,
       "q10": -0.018364,

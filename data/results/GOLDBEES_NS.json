@@ -3,15 +3,15 @@
   "name": "Nippon Gold BeES",
   "category": "ETF",
   "sector": "Gold",
-  "updated_at": "2026-06-23T13:41:15.087234+05:30",
+  "updated_at": "2026-06-23T16:31:15.651308+05:30",
   "data_through": "2026-06-23",
   "regime": "High",
-  "entropy": 0.0006,
+  "entropy": 0.0017,
   "stability": "Stable",
   "transition_risk": {
-    "1d": 0.9499,
+    "1d": 0.9505,
     "3d": 0.9895,
-    "5d": 0.9881
+    "5d": 0.9882
   },
   "empirical_high_prob": 0.9729,
   "var_1pct": -0.056281,
@@ -47,10 +47,10 @@
       "count": 1850
     },
     "High": {
-      "mean": 0.000883,
-      "std": 0.018744,
-      "skew": -0.6291,
-      "kurt": 4.9726,
+      "mean": 0.000889,
+      "std": 0.018737,
+      "skew": -0.6296,
+      "kurt": 4.9833,
       "var_1pct": -0.056281,
       "var_5pct": -0.028303,
       "q10": -0.018285,
