@@ -3,36 +3,36 @@
   "name": "Asian Paints",
   "category": "Stock",
   "sector": "Consumer Discretionary",
-  "updated_at": "2026-06-23T16:31:45.201838+05:30",
-  "data_through": "2026-06-23",
+  "updated_at": "2026-06-24T16:31:42.458178+05:30",
+  "data_through": "2026-06-24",
   "regime": "Low",
-  "entropy": 0.0011,
+  "entropy": 0.0008,
   "stability": "Stable",
   "transition_risk": {
-    "1d": 0.9914,
+    "1d": 0.991,
     "3d": 0.9908,
-    "5d": 0.9839
+    "5d": 0.9847
   },
   "empirical_high_prob": 0.0021,
   "var_1pct": -0.027962,
-  "var_5pct": -0.017742,
+  "var_5pct": -0.01774,
   "return_range": {
-    "q10": -0.012829,
-    "q50": 0.000546,
-    "q90": 0.015441
+    "q10": -0.012826,
+    "q50": 0.000558,
+    "q90": 0.01544
   },
   "regime_stats": {
     "Low": {
       "mean": 0.000871,
-      "std": 0.011521,
-      "skew": 0.097,
-      "kurt": 0.7631,
+      "std": 0.011518,
+      "skew": 0.0969,
+      "kurt": 0.7646,
       "var_1pct": -0.027962,
-      "var_5pct": -0.017742,
-      "q10": -0.012829,
-      "q50": 0.000546,
-      "q90": 0.015441,
-      "count": 2368
+      "var_5pct": -0.01774,
+      "q10": -0.012826,
+      "q50": 0.000558,
+      "q90": 0.01544,
+      "count": 2369
     },
     "Medium": {
       "mean": 0.001308,
@@ -61,8 +61,8 @@
   },
   "transition_matrix": {
     "Low": {
-      "Low": 0.9687,
-      "Medium": 0.0292,
+      "Low": 0.9688,
+      "Medium": 0.0291,
       "High": 0.0021
     },
     "Medium": {
