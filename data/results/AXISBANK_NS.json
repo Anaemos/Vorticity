@@ -3,36 +3,36 @@
   "name": "Axis Bank",
   "category": "Stock",
   "sector": "Private Banking",
-  "updated_at": "2026-06-25T16:30:36.690412+05:30",
-  "data_through": "2026-06-25",
+  "updated_at": "2026-06-29T16:30:54.593890+05:30",
+  "data_through": "2026-06-29",
   "regime": "Low",
-  "entropy": 0.0024,
+  "entropy": 0.0034,
   "stability": "Stable",
   "transition_risk": {
     "1d": 0.9949,
-    "3d": 0.9539,
-    "5d": 0.9877
+    "3d": 0.9468,
+    "5d": 0.9853
   },
   "empirical_high_prob": 0.001,
-  "var_1pct": -0.030066,
-  "var_5pct": -0.020652,
+  "var_1pct": -0.030062,
+  "var_5pct": -0.020644,
   "return_range": {
-    "q10": -0.01526,
-    "q50": 0.000263,
+    "q10": -0.015258,
+    "q50": 0.000252,
     "q90": 0.017376
   },
   "regime_stats": {
     "Low": {
-      "mean": 0.000657,
-      "std": 0.013292,
-      "skew": 0.1265,
-      "kurt": 0.7485,
-      "var_1pct": -0.030066,
-      "var_5pct": -0.020652,
-      "q10": -0.01526,
-      "q50": 0.000263,
+      "mean": 0.000649,
+      "std": 0.013293,
+      "skew": 0.1273,
+      "kurt": 0.7464,
+      "var_1pct": -0.030062,
+      "var_5pct": -0.020644,
+      "q10": -0.015258,
+      "q50": 0.000252,
       "q90": 0.017376,
-      "count": 1942
+      "count": 1943
     },
     "Medium": {
       "mean": 0.001041,
@@ -62,7 +62,7 @@
   "transition_matrix": {
     "Low": {
       "Low": 0.9768,
-      "Medium": 0.0222,
+      "Medium": 0.0221,
       "High": 0.001
     },
     "Medium": {

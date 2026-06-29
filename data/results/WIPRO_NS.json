@@ -3,23 +3,23 @@
   "name": "Wipro",
   "category": "Stock",
   "sector": "IT",
-  "updated_at": "2026-06-26T16:35:17.495717+05:30",
-  "data_through": "2026-06-25",
+  "updated_at": "2026-06-29T16:31:00.958732+05:30",
+  "data_through": "2026-06-29",
   "regime": "Medium",
-  "entropy": 0.1024,
-  "stability": "Unstable",
+  "entropy": 0.0522,
+  "stability": "Stable",
   "transition_risk": {
-    "1d": 0.0029,
+    "1d": 0.003,
     "3d": 0.0012,
     "5d": 0.0016
   },
   "empirical_high_prob": 0.0072,
-  "var_1pct": -0.046675,
-  "var_5pct": -0.030588,
+  "var_1pct": -0.046674,
+  "var_5pct": -0.030586,
   "return_range": {
     "q10": -0.022091,
-    "q50": 0.000686,
-    "q90": 0.02424
+    "q50": 0.000697,
+    "q90": 0.024232
   },
   "regime_stats": {
     "Low": {
@@ -35,16 +35,16 @@
       "count": 2410
     },
     "Medium": {
-      "mean": 0.000737,
-      "std": 0.01908,
-      "skew": 0.0233,
-      "kurt": 1.3684,
-      "var_1pct": -0.046675,
-      "var_5pct": -0.030588,
+      "mean": 0.000738,
+      "std": 0.019076,
+      "skew": 0.0231,
+      "kurt": 1.3703,
+      "var_1pct": -0.046674,
+      "var_5pct": -0.030586,
       "q10": -0.022091,
-      "q50": 0.000686,
-      "q90": 0.02424,
-      "count": 2226
+      "q50": 0.000697,
+      "q90": 0.024232,
+      "count": 2227
     },
     "High": {
       "mean": 0.000449,
