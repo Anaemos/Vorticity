@@ -3,23 +3,23 @@
   "name": "Nippon Nifty BeES",
   "category": "ETF",
   "sector": "Broad Market",
-  "updated_at": "2026-07-10T16:30:39.662280+05:30",
-  "data_through": "2026-07-10",
-  "regime": "Low",
-  "entropy": 0.6823,
+  "updated_at": "2026-07-13T16:30:40.451654+05:30",
+  "data_through": "2026-07-13",
+  "regime": "Medium",
+  "entropy": 0.6798,
   "stability": "Unstable",
   "transition_risk": {
-    "1d": 0.9892,
-    "3d": 0.9889,
-    "5d": 0.9932
+    "1d": 0.0063,
+    "3d": 0.0245,
+    "5d": 0.0429
   },
-  "empirical_high_prob": 0.0023,
-  "var_1pct": -0.020662,
-  "var_5pct": -0.013747,
+  "empirical_high_prob": 0.0085,
+  "var_1pct": -0.019433,
+  "var_5pct": -0.012335,
   "return_range": {
-    "q10": -0.009922,
-    "q50": 0.000562,
-    "q90": 0.009154
+    "q10": -0.009248,
+    "q50": 0.000894,
+    "q90": 0.010029
   },
   "regime_stats": {
     "Low": {
@@ -36,15 +36,15 @@
     },
     "Medium": {
       "mean": 0.000743,
-      "std": 0.007897,
+      "std": 0.007894,
       "skew": -0.0383,
-      "kurt": 0.9749,
-      "var_1pct": -0.019434,
-      "var_5pct": -0.012341,
-      "q10": -0.00925,
+      "kurt": 0.9771,
+      "var_1pct": -0.019433,
+      "var_5pct": -0.012335,
+      "q10": -0.009248,
       "q50": 0.000894,
-      "q90": 0.01003,
-      "count": 1760
+      "q90": 0.010029,
+      "count": 1761
     },
     "High": {
       "mean": 0.001219,
