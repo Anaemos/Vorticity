@@ -3,23 +3,23 @@
   "name": "UltraTech Cement",
   "category": "Stock",
   "sector": "Cement & Infrastructure",
-  "updated_at": "2026-07-17T16:30:44.444063+05:30",
-  "data_through": "2026-07-17",
-  "regime": "Low",
-  "entropy": 0.556,
+  "updated_at": "2026-07-20T16:30:45.109434+05:30",
+  "data_through": "2026-07-20",
+  "regime": "Medium",
+  "entropy": 0.5783,
   "stability": "Unstable",
   "transition_risk": {
-    "1d": 0.9574,
-    "3d": 0.9875,
-    "5d": 0.972
+    "1d": 0.0125,
+    "3d": 0.0162,
+    "5d": 0.043
   },
-  "empirical_high_prob": 0.0207,
-  "var_1pct": -0.037645,
-  "var_5pct": -0.024465,
+  "empirical_high_prob": 0.0,
+  "var_1pct": -0.030554,
+  "var_5pct": -0.021115,
   "return_range": {
-    "q10": -0.018359,
-    "q50": 0.000542,
-    "q90": 0.020054
+    "q10": -0.015691,
+    "q50": 9.2e-05,
+    "q90": 0.017882
   },
   "regime_stats": {
     "Low": {
@@ -35,16 +35,16 @@
       "count": 1840
     },
     "Medium": {
-      "mean": 0.000403,
+      "mean": 0.000411,
       "std": 0.013448,
-      "skew": 0.1731,
-      "kurt": 0.7149,
-      "var_1pct": -0.030556,
-      "var_5pct": -0.021117,
+      "skew": 0.1719,
+      "kurt": 0.7125,
+      "var_1pct": -0.030554,
+      "var_5pct": -0.021115,
       "q10": -0.015691,
-      "q50": 8.7e-05,
-      "q90": 0.017883,
-      "count": 1840
+      "q50": 9.2e-05,
+      "q90": 0.017882,
+      "count": 1841
     },
     "High": {
       "mean": 0.001633,
@@ -52,9 +52,9 @@
       "skew": 0.2483,
       "kurt": 2.1483,
       "var_1pct": -0.067069,
-      "var_5pct": -0.042628,
+      "var_5pct": -0.042629,
       "q10": -0.030687,
-      "q50": 0.001092,
+      "q50": 0.001093,
       "q90": 0.033851,
       "count": 1619
     }

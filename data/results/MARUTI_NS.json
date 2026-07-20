@@ -3,23 +3,23 @@
   "name": "Maruti Suzuki",
   "category": "Stock",
   "sector": "Auto",
-  "updated_at": "2026-07-17T16:30:51.957375+05:30",
-  "data_through": "2026-07-17",
+  "updated_at": "2026-07-20T16:30:52.967723+05:30",
+  "data_through": "2026-07-20",
   "regime": "Medium",
-  "entropy": 0.0118,
+  "entropy": 0.0202,
   "stability": "Stable",
   "transition_risk": {
     "1d": 0.0014,
-    "3d": 0.0098,
-    "5d": 0.0076
+    "3d": 0.0099,
+    "5d": 0.008
   },
   "empirical_high_prob": 0.012,
-  "var_1pct": -0.044614,
-  "var_5pct": -0.030091,
+  "var_1pct": -0.044609,
+  "var_5pct": -0.030071,
   "return_range": {
     "q10": -0.022566,
     "q50": 9.6e-05,
-    "q90": 0.024344
+    "q90": 0.024337
   },
   "regime_stats": {
     "Low": {
@@ -35,16 +35,16 @@
       "count": 2410
     },
     "Medium": {
-      "mean": 0.000666,
-      "std": 0.019318,
-      "skew": 0.2999,
-      "kurt": 1.0217,
-      "var_1pct": -0.044614,
-      "var_5pct": -0.030091,
+      "mean": 0.000656,
+      "std": 0.019319,
+      "skew": 0.3007,
+      "kurt": 1.0202,
+      "var_1pct": -0.044609,
+      "var_5pct": -0.030071,
       "q10": -0.022566,
       "q50": 9.6e-05,
-      "q90": 0.024344,
-      "count": 2005
+      "q90": 0.024337,
+      "count": 2006
     },
     "High": {
       "mean": 0.001568,
@@ -66,7 +66,7 @@
       "High": 0.0008
     },
     "Medium": {
-      "Low": 0.024,
+      "Low": 0.0239,
       "Medium": 0.9641,
       "High": 0.012
     },
