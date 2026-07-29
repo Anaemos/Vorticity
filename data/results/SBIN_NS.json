@@ -3,36 +3,36 @@
   "name": "State Bank of India",
   "category": "Stock",
   "sector": "PSU Banking",
-  "updated_at": "2026-07-27T16:30:41.767046+05:30",
-  "data_through": "2026-07-27",
+  "updated_at": "2026-07-29T16:31:21.632772+05:30",
+  "data_through": "2026-07-29",
   "regime": "Low",
-  "entropy": 0.0024,
+  "entropy": 0.0009,
   "stability": "Stable",
   "transition_risk": {
     "1d": 0.9884,
-    "3d": 0.9876,
+    "3d": 0.9879,
     "5d": 0.9955
   },
   "empirical_high_prob": 0.0015,
-  "var_1pct": -0.031238,
-  "var_5pct": -0.021318,
+  "var_1pct": -0.031231,
+  "var_5pct": -0.021316,
   "return_range": {
-    "q10": -0.017009,
-    "q50": 0.000806,
-    "q90": 0.016962
+    "q10": -0.017008,
+    "q50": 0.000792,
+    "q90": 0.016961
   },
   "regime_stats": {
     "Low": {
-      "mean": 0.00056,
-      "std": 0.013304,
-      "skew": 0.0048,
-      "kurt": 0.2757,
-      "var_1pct": -0.031238,
-      "var_5pct": -0.021318,
-      "q10": -0.017009,
-      "q50": 0.000806,
-      "q90": 0.016962,
-      "count": 1980
+      "mean": 0.000556,
+      "std": 0.013298,
+      "skew": 0.0056,
+      "kurt": 0.2779,
+      "var_1pct": -0.031231,
+      "var_5pct": -0.021316,
+      "q10": -0.017008,
+      "q50": 0.000792,
+      "q90": 0.016961,
+      "count": 1982
     },
     "Medium": {
       "mean": 0.000719,
@@ -61,7 +61,7 @@
   },
   "transition_matrix": {
     "Low": {
-      "Low": 0.9757,
+      "Low": 0.9758,
       "Medium": 0.0227,
       "High": 0.0015
     },
