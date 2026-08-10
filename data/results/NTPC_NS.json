@@ -3,7 +3,7 @@
   "name": "NTPC",
   "category": "Stock",
   "sector": "Power & Utilities",
-  "updated_at": "2026-08-07T20:07:15.528085+05:30",
+  "updated_at": "2026-08-11T00:33:45.470680+05:30",
   "data_through": "2026-08-07",
   "regime": "Low",
   "entropy": 0.0018,
@@ -14,7 +14,7 @@
     "5d": 0.9927
   },
   "empirical_high_prob": 0.0007,
-  "var_1pct": -0.029128,
+  "var_1pct": -0.029127,
   "var_5pct": -0.019716,
   "return_range": {
     "q10": -0.015203,
@@ -27,7 +27,7 @@
       "std": 0.012309,
       "skew": 0.1414,
       "kurt": 0.5271,
-      "var_1pct": -0.029128,
+      "var_1pct": -0.029127,
       "var_5pct": -0.019716,
       "q10": -0.015203,
       "q50": 0.0,
