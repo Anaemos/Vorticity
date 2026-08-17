@@ -3,36 +3,36 @@
   "name": "Maruti Suzuki",
   "category": "Stock",
   "sector": "Auto",
-  "updated_at": "2026-08-14T21:00:39.139105+05:30",
-  "data_through": "2026-08-14",
+  "updated_at": "2026-08-17T22:16:32.766449+05:30",
+  "data_through": "2026-08-17",
   "regime": "Low",
-  "entropy": 0.0004,
+  "entropy": 0.0002,
   "stability": "Stable",
   "transition_risk": {
-    "1d": 0.9723,
+    "1d": 0.9765,
     "3d": 0.9958,
-    "5d": 0.9918
+    "5d": 0.9924
   },
   "empirical_high_prob": 0.0008,
-  "var_1pct": -0.026101,
+  "var_1pct": -0.0261,
   "var_5pct": -0.018274,
   "return_range": {
     "q10": -0.013869,
     "q50": 0.0,
-    "q90": 0.016354
+    "q90": 0.016352
   },
   "regime_stats": {
     "Low": {
-      "mean": 0.000776,
-      "std": 0.012246,
-      "skew": 0.3563,
-      "kurt": 0.8732,
-      "var_1pct": -0.026101,
+      "mean": 0.000773,
+      "std": 0.012244,
+      "skew": 0.3569,
+      "kurt": 0.8743,
+      "var_1pct": -0.0261,
       "var_5pct": -0.018274,
       "q10": -0.013869,
       "q50": 0.0,
-      "q90": 0.016354,
-      "count": 2424
+      "q90": 0.016352,
+      "count": 2425
     },
     "Medium": {
       "mean": 0.000662,
@@ -49,7 +49,7 @@
     "High": {
       "mean": 0.001568,
       "std": 0.032113,
-      "skew": -0.0623,
+      "skew": -0.0622,
       "kurt": 2.3649,
       "var_1pct": -0.086598,
       "var_5pct": -0.052363,
