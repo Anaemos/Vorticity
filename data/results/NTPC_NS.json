@@ -3,10 +3,10 @@
   "name": "NTPC",
   "category": "Stock",
   "sector": "Power & Utilities",
-  "updated_at": "2026-08-24T18:31:22.558810+05:30",
-  "data_through": "2026-08-24",
+  "updated_at": "2026-08-26T19:51:43.633465+05:30",
+  "data_through": "2026-08-26",
   "regime": "Low",
-  "entropy": 0.0003,
+  "entropy": 0.0004,
   "stability": "Stable",
   "transition_risk": {
     "1d": 0.9961,
@@ -14,25 +14,25 @@
     "5d": 0.9914
   },
   "empirical_high_prob": 0.0007,
-  "var_1pct": -0.029083,
-  "var_5pct": -0.019673,
+  "var_1pct": -0.029075,
+  "var_5pct": -0.019662,
   "return_range": {
-    "q10": -0.015195,
+    "q10": -0.015201,
     "q50": 0.0,
-    "q90": 0.015695
+    "q90": 0.015685
   },
   "regime_stats": {
     "Low": {
-      "mean": 5.6e-05,
-      "std": 0.012293,
-      "skew": 0.1423,
-      "kurt": 0.5328,
-      "var_1pct": -0.029083,
-      "var_5pct": -0.019673,
-      "q10": -0.015195,
+      "mean": 5e-05,
+      "std": 0.012292,
+      "skew": 0.1428,
+      "kurt": 0.5325,
+      "var_1pct": -0.029075,
+      "var_5pct": -0.019662,
+      "q10": -0.015201,
       "q50": 0.0,
-      "q90": 0.015695,
-      "count": 2725
+      "q90": 0.015685,
+      "count": 2727
     },
     "Medium": {
       "mean": 0.001253,
@@ -62,7 +62,7 @@
   "transition_matrix": {
     "Low": {
       "Low": 0.9787,
-      "Medium": 0.0206,
+      "Medium": 0.0205,
       "High": 0.0007
     },
     "Medium": {
