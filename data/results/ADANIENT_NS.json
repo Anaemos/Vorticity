@@ -3,36 +3,36 @@
   "name": "Adani Enterprises",
   "category": "Stock",
   "sector": "Conglomerate",
-  "updated_at": "2026-08-26T19:51:41.816921+05:30",
-  "data_through": "2026-08-26",
-  "regime": "Low",
-  "entropy": 0.0026,
-  "stability": "Stable",
+  "updated_at": "2026-08-31T17:09:11.406429+05:30",
+  "data_through": "2026-08-31",
+  "regime": "High",
+  "entropy": 0.6958,
+  "stability": "Unstable",
   "transition_risk": {
-    "1d": 0.9902,
-    "3d": 0.9879,
+    "1d": 0.99,
+    "3d": 0.9878,
     "5d": 0.991
   },
-  "empirical_high_prob": 0.0058,
-  "var_1pct": -0.042365,
-  "var_5pct": -0.027971,
+  "empirical_high_prob": 0.958,
+  "var_1pct": -0.164646,
+  "var_5pct": -0.071578,
   "return_range": {
-    "q10": -0.020362,
-    "q50": 0.00039,
-    "q90": 0.023272
+    "q10": -0.049936,
+    "q50": 0.000626,
+    "q90": 0.059337
   },
   "regime_stats": {
     "Low": {
-      "mean": 0.001365,
-      "std": 0.018291,
-      "skew": 0.2451,
-      "kurt": 1.2485,
-      "var_1pct": -0.042365,
-      "var_5pct": -0.027971,
-      "q10": -0.020362,
+      "mean": 0.001372,
+      "std": 0.018286,
+      "skew": 0.2442,
+      "kurt": 1.249,
+      "var_1pct": -0.042335,
+      "var_5pct": -0.027969,
+      "q10": -0.020361,
       "q50": 0.00039,
-      "q90": 0.023272,
-      "count": 2084
+      "q90": 0.023262,
+      "count": 2086
     },
     "Medium": {
       "mean": 0.00163,
@@ -47,23 +47,23 @@
       "count": 2220
     },
     "High": {
-      "mean": 0.00324,
-      "std": 0.061999,
-      "skew": 1.8258,
-      "kurt": 37.8521,
-      "var_1pct": -0.164882,
-      "var_5pct": -0.071488,
-      "q10": -0.049889,
-      "q50": 0.00063,
-      "q90": 0.059356,
-      "count": 1023
+      "mean": 0.003141,
+      "std": 0.062049,
+      "skew": 1.8202,
+      "kurt": 37.6994,
+      "var_1pct": -0.164646,
+      "var_5pct": -0.071578,
+      "q10": -0.049936,
+      "q50": 0.000626,
+      "q90": 0.059337,
+      "count": 1024
     }
   },
   "transition_matrix": {
     "Low": {
-      "Low": 0.9722,
+      "Low": 0.9717,
       "Medium": 0.0221,
-      "High": 0.0058
+      "High": 0.0062
     },
     "Medium": {
       "Low": 0.0239,
