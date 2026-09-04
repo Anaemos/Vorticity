@@ -3,23 +3,23 @@
   "name": "Nippon Gold BeES",
   "category": "ETF",
   "sector": "Gold",
-  "updated_at": "2026-09-02T16:30:42.481850+05:30",
-  "data_through": "2026-09-02",
+  "updated_at": "2026-09-04T16:30:40.874387+05:30",
+  "data_through": "2026-09-04",
   "regime": "High",
-  "entropy": 0.0004,
+  "entropy": 0.0003,
   "stability": "Stable",
   "transition_risk": {
     "1d": 0.999,
     "3d": 0.9895,
-    "5d": 0.9922
+    "5d": 0.9923
   },
-  "empirical_high_prob": 0.9721,
-  "var_1pct": -0.055365,
-  "var_5pct": -0.028308,
+  "empirical_high_prob": 0.9722,
+  "var_1pct": -0.055281,
+  "var_5pct": -0.028045,
   "return_range": {
-    "q10": -0.01834,
+    "q10": -0.018285,
     "q50": 0.000712,
-    "q90": 0.022293
+    "q90": 0.022542
   },
   "regime_stats": {
     "Low": {
@@ -47,16 +47,16 @@
       "count": 1866
     },
     "High": {
-      "mean": 0.000737,
-      "std": 0.018638,
-      "skew": -0.6092,
-      "kurt": 4.9208,
-      "var_1pct": -0.055365,
-      "var_5pct": -0.028308,
-      "q10": -0.01834,
+      "mean": 0.000782,
+      "std": 0.018625,
+      "skew": -0.6046,
+      "kurt": 4.9223,
+      "var_1pct": -0.055281,
+      "var_5pct": -0.028045,
+      "q10": -0.018285,
       "q50": 0.000712,
-      "q90": 0.022293,
-      "count": 610
+      "q90": 0.022542,
+      "count": 612
     }
   },
   "transition_matrix": {
@@ -72,8 +72,8 @@
     },
     "High": {
       "Low": 0.0082,
-      "Medium": 0.0197,
-      "High": 0.9721
+      "Medium": 0.0196,
+      "High": 0.9722
     }
   }
 }
