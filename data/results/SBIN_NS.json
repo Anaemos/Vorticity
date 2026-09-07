@@ -3,36 +3,36 @@
   "name": "State Bank of India",
   "category": "Stock",
   "sector": "PSU Banking",
-  "updated_at": "2026-09-04T16:30:44.360969+05:30",
-  "data_through": "2026-09-04",
+  "updated_at": "2026-09-07T16:57:50.320043+05:30",
+  "data_through": "2026-09-07",
   "regime": "Low",
-  "entropy": 0.0004,
+  "entropy": 0.0003,
   "stability": "Stable",
   "transition_risk": {
-    "1d": 0.9884,
-    "3d": 0.9808,
+    "1d": 0.9883,
+    "3d": 0.9831,
     "5d": 0.9955
   },
   "empirical_high_prob": 0.0015,
-  "var_1pct": -0.031115,
-  "var_5pct": -0.02133,
+  "var_1pct": -0.031108,
+  "var_5pct": -0.021329,
   "return_range": {
     "q10": -0.017008,
-    "q50": 0.00078,
-    "q90": 0.016957
+    "q50": 0.000764,
+    "q90": 0.016956
   },
   "regime_stats": {
     "Low": {
-      "mean": 0.000551,
-      "std": 0.013281,
-      "skew": 0.006,
-      "kurt": 0.2767,
-      "var_1pct": -0.031115,
-      "var_5pct": -0.02133,
+      "mean": 0.000545,
+      "std": 0.01328,
+      "skew": 0.007,
+      "kurt": 0.2765,
+      "var_1pct": -0.031108,
+      "var_5pct": -0.021329,
       "q10": -0.017008,
-      "q50": 0.00078,
-      "q90": 0.016957,
-      "count": 2009
+      "q50": 0.000764,
+      "q90": 0.016956,
+      "count": 2010
     },
     "Medium": {
       "mean": 0.000719,
