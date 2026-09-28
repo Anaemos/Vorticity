@@ -3,36 +3,36 @@
   "name": "Sun Pharma",
   "category": "Stock",
   "sector": "Pharma",
-  "updated_at": "2026-09-25T16:30:58.121145+05:30",
-  "data_through": "2026-09-25",
+  "updated_at": "2026-09-28T16:30:47.294199+05:30",
+  "data_through": "2026-09-28",
   "regime": "Low",
-  "entropy": 0.0158,
+  "entropy": 0.0011,
   "stability": "Stable",
   "transition_risk": {
     "1d": 0.993,
-    "3d": 0.993,
+    "3d": 0.9931,
     "5d": 0.9941
   },
   "empirical_high_prob": 0.004,
   "var_1pct": -0.02801,
-  "var_5pct": -0.017805,
+  "var_5pct": -0.017804,
   "return_range": {
-    "q10": -0.013215,
+    "q10": -0.013214,
     "q50": 0.000632,
-    "q90": 0.015806
+    "q90": 0.015805
   },
   "regime_stats": {
     "Low": {
-      "mean": 0.000951,
-      "std": 0.011866,
-      "skew": 0.1477,
-      "kurt": 0.871,
+      "mean": 0.000947,
+      "std": 0.011864,
+      "skew": 0.1485,
+      "kurt": 0.8712,
       "var_1pct": -0.02801,
-      "var_5pct": -0.017805,
-      "q10": -0.013215,
+      "var_5pct": -0.017804,
+      "q10": -0.013214,
       "q50": 0.000632,
-      "q90": 0.015806,
-      "count": 2249
+      "q90": 0.015805,
+      "count": 2250
     },
     "Medium": {
       "mean": 0.000976,
@@ -61,7 +61,7 @@
   },
   "transition_matrix": {
     "Low": {
-      "Low": 0.9786,
+      "Low": 0.9787,
       "Medium": 0.0173,
       "High": 0.004
     },
