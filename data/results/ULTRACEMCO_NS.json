@@ -3,48 +3,48 @@
   "name": "UltraTech Cement",
   "category": "Stock",
   "sector": "Cement & Infrastructure",
-  "updated_at": "2026-10-05T19:25:52.737526+05:30",
-  "data_through": "2026-10-05",
-  "regime": "Medium",
-  "entropy": 0.5975,
+  "updated_at": "2026-10-07T16:30:41.781612+05:30",
+  "data_through": "2026-10-07",
+  "regime": "Low",
+  "entropy": 0.576,
   "stability": "Unstable",
   "transition_risk": {
-    "1d": 0.0173,
-    "3d": 0.0641,
-    "5d": 0.0432
+    "1d": 0.9148,
+    "3d": 0.9933,
+    "5d": 0.9721
   },
-  "empirical_high_prob": 0.0,
-  "var_1pct": -0.030509,
-  "var_5pct": -0.021074,
+  "empirical_high_prob": 0.0203,
+  "var_1pct": -0.037231,
+  "var_5pct": -0.024411,
   "return_range": {
-    "q10": -0.015653,
-    "q50": 8.7e-05,
-    "q90": 0.017835
+    "q10": -0.018359,
+    "q50": 0.000542,
+    "q90": 0.019906
   },
   "regime_stats": {
     "Low": {
-      "mean": 0.000604,
-      "std": 0.01541,
-      "skew": 0.0616,
-      "kurt": 0.8249,
-      "var_1pct": -0.037259,
-      "var_5pct": -0.024421,
-      "q10": -0.01836,
+      "mean": 0.000605,
+      "std": 0.015406,
+      "skew": 0.0615,
+      "kurt": 0.8252,
+      "var_1pct": -0.037231,
+      "var_5pct": -0.024411,
+      "q10": -0.018359,
       "q50": 0.000542,
-      "q90": 0.019908,
-      "count": 1867
+      "q90": 0.019906,
+      "count": 1869
     },
     "Medium": {
-      "mean": 0.000403,
-      "std": 0.013414,
-      "skew": 0.1708,
-      "kurt": 0.7109,
-      "var_1pct": -0.030509,
-      "var_5pct": -0.021074,
-      "q10": -0.015653,
-      "q50": 8.7e-05,
-      "q90": 0.017835,
-      "count": 1868
+      "mean": 0.000391,
+      "std": 0.013409,
+      "skew": 0.173,
+      "kurt": 0.7147,
+      "var_1pct": -0.030507,
+      "var_5pct": -0.021068,
+      "q10": -0.015647,
+      "q50": 7.4e-05,
+      "q90": 0.017833,
+      "count": 1869
     },
     "High": {
       "mean": 0.001633,
@@ -62,8 +62,8 @@
   "transition_matrix": {
     "Low": {
       "Low": 0.0,
-      "Medium": 0.9796,
-      "High": 0.0204
+      "Medium": 0.9797,
+      "High": 0.0203
     },
     "Medium": {
       "Low": 1.0,
