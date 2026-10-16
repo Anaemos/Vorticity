@@ -3,23 +3,23 @@
   "name": "ITC",
   "category": "Stock",
   "sector": "FMCG",
-  "updated_at": "2026-10-14T16:31:06.567674+05:30",
-  "data_through": "2026-10-14",
+  "updated_at": "2026-10-16T18:48:59.084365+05:30",
+  "data_through": "2026-10-16",
   "regime": "High",
-  "entropy": 0.002,
+  "entropy": 0.0061,
   "stability": "Stable",
   "transition_risk": {
     "1d": 0.992,
     "3d": 0.9971,
-    "5d": 0.991
+    "5d": 0.9911
   },
   "empirical_high_prob": 0.9729,
-  "var_1pct": -0.063855,
-  "var_5pct": -0.03977,
+  "var_1pct": -0.063841,
+  "var_5pct": -0.039765,
   "return_range": {
-    "q10": -0.029812,
+    "q10": -0.029786,
     "q50": -0.000749,
-    "q90": 0.032141
+    "q90": 0.032109
   },
   "regime_stats": {
     "Low": {
@@ -47,16 +47,16 @@
       "count": 2031
     },
     "High": {
-      "mean": 0.000188,
-      "std": 0.02691,
-      "skew": -0.0887,
-      "kurt": 2.6934,
-      "var_1pct": -0.063855,
-      "var_5pct": -0.03977,
-      "q10": -0.029812,
+      "mean": 0.000195,
+      "std": 0.026886,
+      "skew": -0.0895,
+      "kurt": 2.7029,
+      "var_1pct": -0.063841,
+      "var_5pct": -0.039765,
+      "q10": -0.029786,
       "q50": -0.000749,
-      "q90": 0.032141,
-      "count": 1071
+      "q90": 0.032109,
+      "count": 1073
     }
   },
   "transition_matrix": {
