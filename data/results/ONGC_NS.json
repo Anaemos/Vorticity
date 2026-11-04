@@ -3,36 +3,36 @@
   "name": "ONGC",
   "category": "Stock",
   "sector": "Oil & Gas",
-  "updated_at": "2026-11-02T16:30:57.911632+05:30",
-  "data_through": "2026-11-02",
+  "updated_at": "2026-11-04T20:21:17.190854+05:30",
+  "data_through": "2026-11-04",
   "regime": "Low",
-  "entropy": 0.071,
-  "stability": "Uncertain",
+  "entropy": 0.0116,
+  "stability": "Stable",
   "transition_risk": {
-    "1d": 0.9927,
-    "3d": 0.9929,
-    "5d": 0.9905
+    "1d": 0.9924,
+    "3d": 0.9941,
+    "5d": 0.9906
   },
   "empirical_high_prob": 0.0014,
-  "var_1pct": -0.030411,
-  "var_5pct": -0.020799,
+  "var_1pct": -0.030397,
+  "var_5pct": -0.020791,
   "return_range": {
-    "q10": -0.016399,
+    "q10": -0.016396,
     "q50": 0.0,
     "q90": 0.016218
   },
   "regime_stats": {
     "Low": {
-      "mean": 0.000209,
-      "std": 0.012986,
+      "mean": 0.00021,
+      "std": 0.012985,
       "skew": 0.0939,
-      "kurt": 0.49,
-      "var_1pct": -0.030411,
-      "var_5pct": -0.020799,
-      "q10": -0.016399,
+      "kurt": 0.4885,
+      "var_1pct": -0.030397,
+      "var_5pct": -0.020791,
+      "q10": -0.016396,
       "q50": 0.0,
       "q90": 0.016218,
-      "count": 2115
+      "count": 2117
     },
     "Medium": {
       "mean": 0.000433,
@@ -50,7 +50,7 @@
       "mean": 0.001623,
       "std": 0.037965,
       "skew": 1.1901,
-      "kurt": 33.6059,
+      "kurt": 33.606,
       "var_1pct": -0.096277,
       "var_5pct": -0.048993,
       "q10": -0.036712,
@@ -62,7 +62,7 @@
   "transition_matrix": {
     "Low": {
       "Low": 0.9768,
-      "Medium": 0.0218,
+      "Medium": 0.0217,
       "High": 0.0014
     },
     "Medium": {
