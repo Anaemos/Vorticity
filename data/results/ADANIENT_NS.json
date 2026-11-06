@@ -3,22 +3,22 @@
   "name": "Adani Enterprises",
   "category": "Stock",
   "sector": "Conglomerate",
-  "updated_at": "2026-11-04T20:21:23.262789+05:30",
-  "data_through": "2026-11-04",
+  "updated_at": "2026-11-06T16:58:22.674669+05:30",
+  "data_through": "2026-11-06",
   "regime": "Medium",
-  "entropy": 0.0708,
-  "stability": "Stable",
+  "entropy": 0.6897,
+  "stability": "Unstable",
   "transition_risk": {
     "1d": 0.9902,
-    "3d": 0.9877,
+    "3d": 0.9879,
     "5d": 0.991
   },
   "empirical_high_prob": 0.0137,
-  "var_1pct": -0.069563,
-  "var_5pct": -0.043748,
+  "var_1pct": -0.069547,
+  "var_5pct": -0.043744,
   "return_range": {
-    "q10": -0.032865,
-    "q50": 0.000633,
+    "q10": -0.032861,
+    "q50": 0.000638,
     "q90": 0.037777
   },
   "regime_stats": {
@@ -35,16 +35,16 @@
       "count": 2083
     },
     "Medium": {
-      "mean": 0.001533,
-      "std": 0.028833,
-      "skew": 0.1957,
-      "kurt": 1.0948,
-      "var_1pct": -0.069563,
-      "var_5pct": -0.043748,
-      "q10": -0.032865,
-      "q50": 0.000633,
+      "mean": 0.001538,
+      "std": 0.028821,
+      "skew": 0.1953,
+      "kurt": 1.098,
+      "var_1pct": -0.069547,
+      "var_5pct": -0.043744,
+      "q10": -0.032861,
+      "q50": 0.000638,
       "q90": 0.037777,
-      "count": 2265
+      "count": 2267
     },
     "High": {
       "mean": 0.00324,
