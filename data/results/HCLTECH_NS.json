@@ -3,36 +3,36 @@
   "name": "HCL Technologies",
   "category": "Stock",
   "sector": "IT",
-  "updated_at": "2026-11-18T16:31:01.111020+05:30",
-  "data_through": "2026-11-18",
+  "updated_at": "2026-11-20T16:30:59.123854+05:30",
+  "data_through": "2026-11-20",
   "regime": "Low",
-  "entropy": 0.2054,
-  "stability": "Unstable",
+  "entropy": 0.0034,
+  "stability": "Stable",
   "transition_risk": {
     "1d": 0.0014,
     "3d": 0.01,
-    "5d": 0.0169
+    "5d": 0.0171
   },
-  "empirical_high_prob": 0.0015,
+  "empirical_high_prob": 0.0014,
   "var_1pct": -0.028592,
-  "var_5pct": -0.019822,
+  "var_5pct": -0.019806,
   "return_range": {
-    "q10": -0.014863,
+    "q10": -0.014853,
     "q50": 0.000646,
-    "q90": 0.016569
+    "q90": 0.016553
   },
   "regime_stats": {
     "Low": {
-      "mean": 0.000914,
-      "std": 0.012676,
+      "mean": 0.000913,
+      "std": 0.012673,
       "skew": 0.1389,
-      "kurt": 0.488,
+      "kurt": 0.4885,
       "var_1pct": -0.028592,
-      "var_5pct": -0.019822,
-      "q10": -0.014863,
+      "var_5pct": -0.019806,
+      "q10": -0.014853,
       "q50": 0.000646,
-      "q90": 0.016569,
-      "count": 2068
+      "q90": 0.016553,
+      "count": 2070
     },
     "Medium": {
       "mean": 0.000838,
@@ -54,7 +54,7 @@
       "var_1pct": -0.085571,
       "var_5pct": -0.05183,
       "q10": -0.038186,
-      "q50": 0.000686,
+      "q50": 0.000685,
       "q90": 0.040221,
       "count": 1312
     }
@@ -63,7 +63,7 @@
     "Low": {
       "Low": 0.9729,
       "Medium": 0.0256,
-      "High": 0.0015
+      "High": 0.0014
     },
     "Medium": {
       "Low": 0.0275,
