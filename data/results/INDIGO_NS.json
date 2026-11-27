@@ -3,23 +3,23 @@
   "name": "InterGlobe Aviation (IndiGo)",
   "category": "Stock",
   "sector": "Aviation",
-  "updated_at": "2026-11-25T16:49:02.330492+05:30",
-  "data_through": "2026-11-25",
+  "updated_at": "2026-11-27T16:30:50.925453+05:30",
+  "data_through": "2026-11-27",
   "regime": "Medium",
-  "entropy": 0.0234,
+  "entropy": 0.013,
   "stability": "Stable",
   "transition_risk": {
-    "1d": 0.0046,
+    "1d": 0.0047,
     "3d": 0.9597,
-    "5d": 0.0207
+    "5d": 0.0205
   },
   "empirical_high_prob": 0.0181,
-  "var_1pct": -0.056692,
-  "var_5pct": -0.034802,
+  "var_1pct": -0.056631,
+  "var_5pct": -0.034795,
   "return_range": {
-    "q10": -0.024181,
+    "q10": -0.02415,
     "q50": 0.000223,
-    "q90": 0.025558
+    "q90": 0.025555
   },
   "regime_stats": {
     "Low": {
@@ -35,16 +35,16 @@
       "count": 947
     },
     "Medium": {
-      "mean": 0.000314,
-      "std": 0.020665,
-      "skew": -0.0652,
-      "kurt": 1.4988,
-      "var_1pct": -0.056692,
-      "var_5pct": -0.034802,
-      "q10": -0.024181,
+      "mean": 0.000304,
+      "std": 0.020654,
+      "skew": -0.0642,
+      "kurt": 1.5011,
+      "var_1pct": -0.056631,
+      "var_5pct": -0.034795,
+      "q10": -0.02415,
       "q50": 0.000223,
-      "q90": 0.025558,
-      "count": 1105
+      "q90": 0.025555,
+      "count": 1107
     },
     "High": {
       "mean": 0.001367,
@@ -66,8 +66,8 @@
       "High": 0.0021
     },
     "Medium": {
-      "Low": 0.0272,
-      "Medium": 0.9547,
+      "Low": 0.0271,
+      "Medium": 0.9548,
       "High": 0.0181
     },
     "High": {
